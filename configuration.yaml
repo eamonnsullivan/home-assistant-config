@@ -26,3 +26,15 @@ spotify:
 device_tracker:
   - platform: netgear
     password: !secret router_password
+sensor:
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /config
+      - type: processor_temperature
+      - type: memory_use_percent
+      - type: processor_use
+      - type: ipv4_address
+        arg: wlan0
+mqtt:
+  broker: localhost
