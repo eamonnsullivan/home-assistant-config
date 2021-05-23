@@ -1,0 +1,28 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+media_player:
+  - platform: soundtouch
+    host: 192.168.1.4
+    port: 8090
+    name: Soundtouch Living Room
+  - platform: soundtouch
+    host: 192.168.1.18
+    port: 8090
+    name: Soundtouch Kitchen
+spotify:
+  client_id: 0185bb658f774eb2b288e43c978c8ba1
+  client_secret: !secret spotify_secret
+device_tracker:
+  - platform: netgear
+    password: !secret router_password

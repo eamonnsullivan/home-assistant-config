@@ -1,0 +1,105 @@
+
+re300:
+  name: RE300
+  mac: 6A:C6:95:6B:C6:95
+  icon:
+  picture:
+  track: true
+
+soundtouch_livingroom:
+  name: SoundTouch-Livingroom
+  mac: 84:EB:18:49:FF:84
+  icon:
+  picture:
+  track: true
+
+appletv:
+  name: AppleTV
+  mac: CC:D2:81:6B:C5:BE
+  icon:
+  picture:
+  track: true
+
+mc_s105910:
+  name: MC-S105910
+  mac: 6A:C6:95:CD:F1:85
+  icon:
+  picture:
+  track: true
+
+google_home_mini:
+  name: Google-Home-Mini
+  mac: 7C:D9:5C:1F:B2:8C
+  icon:
+  picture:
+  track: true
+
+hagrid:
+  name: hagrid
+  mac: 04:54:53:02:08:58
+  icon:
+  picture:
+  track: true
+
+gertrude:
+  name: gertrude
+  mac: 6A:C6:95:9F:F1:7D
+  icon:
+  picture:
+  track: true
+
+soundtouch_kitchen:
+  name: SoundTouch-Kitchen
+  mac: 7C:EC:79:70:51:BA
+  icon:
+  picture:
+  track: true
+
+thinkpad:
+  name: thinkpad
+  mac: 34:F3:9A:5D:5E:1C
+  icon:
+  picture:
+  track: true
+
+pineapple:
+  name: pineapple
+  mac: 6A:C6:95:FD:0D:ED
+  icon:
+  picture:
+  track: true
+
+einstein:
+  name: einstein
+  mac: 00:11:85:74:FC:35
+  icon:
+  picture:
+  track: true
+
+2e_c6_95_d1_f5_55:
+  name: 2e_c6_95_d1_f5_55
+  mac: 2E:C6:95:D1:F5:55
+  icon:
+  picture:
+  track: true
+
+6c_56_97_a9_8e_2e:
+  name: 6C:56:97:A9:8E:2E
+  mac: 6C:56:97:A9:8E:2E
+  icon:
+  picture:
+  track: true
+
+theresansiphone:
+  name: TheresansiPhone
+  mac: 6A:F2:04:82:EC:32
+  icon:
+  picture:
+  track: true
+
+ca_09_c3_4d_74_73:
+  name: ca_09_c3_4d_74_73
+  mac: CA:09:C3:4D:74:73
+  icon:
+  picture:
+  track: true
