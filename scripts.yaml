@@ -1,0 +1,45 @@
+apple_tv_sleep:
+  alias: "Make the Apple TV sleep"
+  sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.appletv
+      data:
+        delay_secs: 1
+        command:
+          - home_hold
+          - select
+    - service: media_player.turn_off
+      target:
+        entity_id: media_player.appletv
+apple_tv_wake:
+  alias: "Wake the Apple TV up"
+  sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.appletv
+      data:
+        delay_secs: 1
+        command:
+          - menu
+    - service: media_player.turn_on
+      target:
+        entity_id: media_player.appletv
+spotify_play_radioparadise_everywhere:
+  alias: "Play Radioparadise everywhere"
+  sequence:
+    - service: media_player.turn_on
+      target:
+        entity_id: media_player.soundtouch_living_room
+    - service: media_player.turn_on
+      target:
+        entity_id: media_player.soundtouch_kitchen
+    - service: soundtouch.play_everywhere
+      data:
+        master: media_player.soundtouch_living_room
+    - service: media_player.play_media
+      target:
+        entity_id: media_player.soundtouch_living_room
+      data:
+        media_content_id: http://stream.radioparadise.com/aac-128
+        media_content_type: MUSIC

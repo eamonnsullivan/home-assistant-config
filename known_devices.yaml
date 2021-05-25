@@ -103,3 +103,45 @@ ca_09_c3_4d_74_73:
   icon:
   picture:
   track: true
+
+gertrude_2:
+  name: gertrude
+  mac: E0:D4:E8:9F:F1:7D
+  icon:
+  picture:
+  track: true
+
+6a_76_17_d7_7b_c1:
+  name: 6a_76_17_d7_7b_c1
+  mac: 6A:76:17:D7:7B:C1
+  icon:
+  picture:
+  track: true
+
+soundtouch_kitchen_2:
+  name: SoundTouch-Kitchen
+  mac: 6A:C6:95:70:51:BA
+  icon:
+  picture:
+  track: true
+
+pineapple_2:
+  name: pineapple
+  mac: DC:A6:32:FD:0D:ED
+  icon:
+  picture:
+  track: true
+
+philips_hue:
+  name: Philips-hue
+  mac: EC:B5:FA:23:FB:98
+  icon:
+  picture:
+  track: true
+
+mc_s105910_2:
+  name: MC-S105910
+  mac: C4:B3:01:CD:F1:85
+  icon:
+  picture:
+  track: true
