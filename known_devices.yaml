@@ -81,14 +81,14 @@ einstein:
   mac: 2E:C6:95:D1:F5:55
   icon:
   picture:
-  track: true
+  track: false
 
 6c_56_97_a9_8e_2e:
   name: 6C:56:97:A9:8E:2E
   mac: 6C:56:97:A9:8E:2E
   icon:
   picture:
-  track: true
+  track: false
 
 theresansiphone:
   name: TheresansiPhone
@@ -102,7 +102,7 @@ ca_09_c3_4d_74_73:
   mac: CA:09:C3:4D:74:73
   icon:
   picture:
-  track: true
+  track: false
 
 gertrude_2:
   name: gertrude
@@ -116,14 +116,14 @@ gertrude_2:
   mac: 6A:76:17:D7:7B:C1
   icon:
   picture:
-  track: true
+  track: false
 
 soundtouch_kitchen_2:
   name: SoundTouch-Kitchen
   mac: 6A:C6:95:70:51:BA
   icon:
   picture:
-  track: true
+  track: false
 
 pineapple_2:
   name: pineapple
@@ -165,7 +165,7 @@ f0_a2_25_0e_ea_c2:
   mac: F0:A2:25:0E:EA:C2
   icon:
   picture:
-  track: true
+  track: false
 
 lwip:
   name: lwip
