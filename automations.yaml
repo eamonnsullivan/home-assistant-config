@@ -9,12 +9,101 @@
   action:
   - service: light.turn_on
     target:
-      area_id: living_room
+      area_id:
+      - living_room
+      - sun_room
     data:
+      transition: 180
       profile: Bright
-  - service: light.turn_on
-    target:
-      area_id: sun_room
+  mode: single
+- id: '1621968896934'
+  alias: Turn down the lights when AppleTV starts playing
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 8aa6c5572581e320b774be198267f2ca
+    domain: media_player
+    entity_id: media_player.appletv
+    type: turned_on
+    for:
+      hours: 0
+      minutes: 2
+      seconds: 0
+      milliseconds: 0
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 8300465ea863692ac0bc7a8ed52977e6
+    entity_id: light.hue_color_lamp_1
+    domain: light
+  - condition: device
+    type: is_on
+    device_id: fee7d7290fe788902d4fb1dbeb71a0d7
+    entity_id: light.hue_color_lamp_3
+    domain: light
+  action:
+  - service: hue.hue_activate_scene
     data:
-      profile: Relax
+      scene_name: Dimmed
+      group_name: Living room
+  mode: single
+- id: '1622059308545'
+  alias: turn off living room lights at bedtime
+  description: ''
+  trigger:
+  - platform: time
+    at: '22:00'
+  condition:
+  - condition: zone
+    entity_id: device_tracker.eamonns_iphone
+    zone: zone.home
+  - condition: or
+    conditions:
+    - condition: zone
+      entity_id: device_tracker.theresansiphone_2
+      zone: zone.home
+  action:
+  - service: light.turn_off
+    target:
+      area_id:
+      - living_room
+      - sun_room
+    data:
+      transition: 300
+  mode: single
+- id: '1622059816659'
+  alias: Turn off plug
+  description: ''
+  trigger:
+  - platform: time
+    at: '22:00'
+  condition: []
+  action:
+  - service: switch.turn_off
+    target:
+      entity_id: switch.tapo_smart_plug
+  mode: single
+- id: '1622102535373'
+  alias: Turn off Eamonn's office
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:30'
+  condition: []
+  action:
+  - service: switch.turn_off
+    target:
+      entity_id: switch.tapo_smart_plug
+  mode: single
+- id: '1622102608384'
+  alias: Turn on Eamonn's office
+  description: ''
+  trigger:
+  - platform: time
+    at: 07:00
+  condition: []
+  action:
+  - service: switch.turn_on
+    target:
+      entity_id: switch.tapo_smart_plug
   mode: single

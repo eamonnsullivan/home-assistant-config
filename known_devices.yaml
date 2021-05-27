@@ -145,3 +145,31 @@ mc_s105910_2:
   icon:
   picture:
   track: true
+
+tapo_smartplug:
+  name: Tapo_SmartPlug
+  mac: 00:5F:67:91:84:45
+  icon:
+  picture:
+  track: true
+
+theresansiphone_2:
+  name: TheresansiPhone
+  mac: D6:12:BC:6F:1F:C3
+  icon:
+  picture:
+  track: true
+
+f0_a2_25_0e_ea_c2:
+  name: F0:A2:25:0E:EA:C2
+  mac: F0:A2:25:0E:EA:C2
+  icon:
+  picture:
+  track: true
+
+lwip:
+  name: lwip
+  mac: 84:E3:42:B2:D1:8C
+  icon:
+  picture:
+  track: true
