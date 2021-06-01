@@ -5,14 +5,15 @@
   - platform: numeric_state
     entity_id: sun.sun
     attribute: elevation
-    below: '10'
+    below: '4'
   condition: []
   action:
   - service: light.turn_on
     target:
       area_id:
       - living_room
-      - sun_room
+      - upstairs_hallway
+      - downstairs_hallway
     data:
       transition: 180
       profile: Bright
@@ -54,18 +55,15 @@
   trigger:
   - platform: state
     entity_id:
-    - device_tracker.theresa_sullivan_s_iphone
-    - device_tracker.theresansiphone
-    - device_tracker.theresansiphone_2
-    - device_tracker.eamonns_iphone
-    - device_tracker.eamonns_iphone_2
+    - person.eamonn_sullivan
+    - person.theresa_sullivan
     from: not_home
     to: home
   condition:
   - condition: numeric_state
     entity_id: sun.sun
-    below: '5'
     attribute: elevation
+    below: '5'
   action:
   - service: light.turn_on
     target:
@@ -118,3 +116,25 @@
     input:
       notification_message: Home Assistant has succesfully restarted!
       notify_device: a52e1ff910aed3da5411cccec929a64e
+- id: '1622229812148'
+  alias: Turn lights out when no one is home
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sun.sun
+    attribute: elevation
+    below: '4'
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.eamonn_sullivan
+      state: not_home
+    - condition: state
+      entity_id: person.theresa_sullivan
+      state: not_home
+  action:
+  - service: light.turn_off
+    target:
+      entity_id: light.whole_house
+  mode: single

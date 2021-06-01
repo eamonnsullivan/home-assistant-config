@@ -1,0 +1,73 @@
+- id: '1622234078851'
+  name: Watching TV
+  entities:
+    media_player.appletv:
+      app_id: com.apple.TVAirPlay
+      app_name: AirPlay
+      friendly_name: AppleTV
+      supported_features: 317363
+      state: idle
+    remote.appletv:
+      friendly_name: AppleTV
+      supported_features: 0
+      state: 'on'
+    light.hue_color_lamp_3:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 178
+      hs_color:
+      - 38.667
+      - 52.941
+      rgb_color:
+      - 255
+      - 207
+      - 120
+      xy_color:
+      - 0.457
+      - 0.41
+      effect: none
+      friendly_name: Couch light
+      supported_features: 63
+      state: 'on'
+    light.color_temperature_light_1:
+      min_mireds: 153
+      max_mireds: 370
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 184
+      color_temp: 370
+      friendly_name: Fireplace lamp
+      supported_features: 43
+      state: 'on'
+    light.hue_color_lamp_1:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      supported_color_modes:
+      - color_temp
+      - hs
+      friendly_name: Living room light
+      supported_features: 63
+      state: 'off'
+    light.hue_color_lamp_2:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      supported_color_modes:
+      - color_temp
+      - hs
+      friendly_name: Sun room light
+      supported_features: 63
+      state: 'off'

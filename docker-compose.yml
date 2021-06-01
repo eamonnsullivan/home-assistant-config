@@ -8,3 +8,16 @@ services:
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
     network_mode: host
+  nodered:
+    container_name: nodered
+    image: nodered/node-red
+    ports:
+      - "1880:1880"
+    volumes:
+      # Local path where all Node-RED config will be stored.
+      - /home/eamonn/nodered:/data
+    depends_on:
+      - homeassistant
+    environment:
+      TZ: "Europe/London"
+    restart: unless-stopped

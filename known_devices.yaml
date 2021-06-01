@@ -173,3 +173,94 @@ lwip:
   icon:
   picture:
   track: true
+
+blueberry:
+  name: blueberry
+  mac: 6A:C6:95:53:1A:CB
+  icon:
+  picture:
+  track: true
+
+84_e3_42_18_22_9d:
+  name: 84:E3:42:18:22:9D
+  mac: 84:E3:42:18:22:9D
+  icon:
+  picture:
+  track: true
+
+84_e3_42_22_d0_a3:
+  name: 84:E3:42:22:D0:A3
+  mac: 84:E3:42:22:D0:A3
+  icon:
+  picture:
+  track: true
+
+84_e3_42_13_94_9b:
+  name: 84:E3:42:13:94:9B
+  mac: 84:E3:42:13:94:9B
+  icon:
+  picture:
+  track: true
+
+thinkpad_2:
+  name: thinkpad
+  mac: 6A:C6:95:5D:5E:1C
+  icon:
+  picture:
+  track: true
+
+84_e3_42_22_ec_a6:
+  name: 84:E3:42:22:EC:A6
+  mac: 84:E3:42:22:EC:A6
+  icon:
+  picture:
+  track: true
+
+liams_iphone:
+  name: Liams-iPhone
+  mac: 42:8E:22:E7:C2:8E
+  icon:
+  picture:
+  track: true
+
+iphone:
+  name: iPhone
+  mac: 8E:D0:94:FA:AF:43
+  icon:
+  picture:
+  track: true
+
+kathleensiphone:
+  name: KathleensiPhone
+  mac: 56:CC:81:3F:26:74
+  icon:
+  picture:
+  track: true
+
+76_33_b4_97_65_fe:
+  name: 76:33:B4:97:65:FE
+  mac: 76:33:B4:97:65:FE
+  icon:
+  picture:
+  track: true
+
+58_d9_c3_bc_eb_fc:
+  name: 58:D9:C3:BC:EB:FC
+  mac: 58:D9:C3:BC:EB:FC
+  icon:
+  picture:
+  track: true
+
+iphone_2:
+  name: iPhone
+  mac: DE:0B:87:4F:67:5B
+  icon:
+  picture:
+  track: true
+
+liams_iphone_2:
+  name: Liams-iPhone
+  mac: 7A:CC:8F:C5:D6:2F
+  icon:
+  picture:
+  track: true
