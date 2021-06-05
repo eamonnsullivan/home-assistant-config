@@ -1,2 +1,10 @@
 # prevent accidental commit of secrets.yaml
 secrets.yaml
+.tts/
+.cloud/
+.storage/
+.HA_VERSION
+*.log
+*.db
+*.db-shm
+*.db-wal

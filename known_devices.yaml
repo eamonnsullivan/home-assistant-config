@@ -264,3 +264,10 @@ liams_iphone_2:
   icon:
   picture:
   track: true
+
+shellymotionsensor_60a4239924d4:
+  name: shellymotionsensor-60A4239924D4
+  mac: 60:A4:23:99:24:D4
+  icon:
+  picture:
+  track: true

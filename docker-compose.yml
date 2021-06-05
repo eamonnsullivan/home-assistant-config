@@ -15,7 +15,7 @@ services:
       - "1880:1880"
     volumes:
       # Local path where all Node-RED config will be stored.
-      - /home/eamonn/nodered:/data
+      - /home/eamonn/home-node-red:/data
     depends_on:
       - homeassistant
     environment:

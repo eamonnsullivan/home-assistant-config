@@ -130,9 +130,13 @@
     - condition: state
       entity_id: person.eamonn_sullivan
       state: not_home
+      for:
+        hours: 1
     - condition: state
       entity_id: person.theresa_sullivan
       state: not_home
+      for:
+        hours: 1
   action:
   - service: light.turn_off
     target:
