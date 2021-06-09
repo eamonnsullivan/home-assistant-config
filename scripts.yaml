@@ -70,3 +70,7 @@ play_spotify_everywhere:
       media_content_id: 1
       media_content_type: PLAYLIST
   mode: single
+good_night:
+  alias: Good night
+  mode: single
+  sequence:

@@ -271,3 +271,17 @@ shellymotionsensor_60a4239924d4:
   icon:
   picture:
   track: true
+
+raspberrypi:
+  name: raspberrypi
+  mac: E4:5F:01:23:B2:FA
+  icon:
+  picture:
+  track: true
+
+c2_c9_e2_6b_c6_94:
+  name: C2:C9:E2:6B:C6:94
+  mac: C2:C9:E2:6B:C6:94
+  icon:
+  picture:
+  track: true

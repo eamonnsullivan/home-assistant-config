@@ -1,6 +1,6 @@
 # prevent accidental commit of secrets.yaml
 secrets.yaml
-.tts/
+tts/
 .cloud/
 .storage/
 .HA_VERSION
