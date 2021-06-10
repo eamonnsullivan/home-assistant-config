@@ -1,76 +1,30 @@
-apple_tv_sleep:
-  alias: Make the Apple TV sleep
-  sequence:
-  - service: remote.send_command
-    target:
-      entity_id: remote.appletv
-    data:
-      delay_secs: 1
-      command: home_hold,select
-  - service: media_player.turn_off
-    target:
-      entity_id: media_player.appletv
-  mode: single
-apple_tv_wake:
-  alias: Wake the Apple TV up
-  sequence:
-  - service: remote.send_command
-    target:
-      entity_id: remote.appletv
-    data:
-      delay_secs: 1
-      command:
-      - menu
-  - service: media_player.turn_on
-    target:
-      entity_id: media_player.appletv
-play_radioparadise_everywhere:
-  alias: Play Radioparadise everywhere
-  sequence:
-  - service: media_player.turn_on
-    target:
-      entity_id: media_player.soundtouch_living_room
-  - service: media_player.turn_on
-    target:
-      entity_id: media_player.soundtouch_kitchen
-  - service: soundtouch.play_everywhere
-    data:
-      master: media_player.soundtouch_living_room
-  - service: media_player.play_media
-    target:
-      entity_id: media_player.soundtouch_living_room
-    data:
-      media_content_id: http://stream.radioparadise.com/aac-128
-      media_content_type: MUSIC
-stop_soundtouch:
-  alias: Turn off the soundtouch speakers
-  sequence:
-  - service: media_player.turn_off
-    target:
-      entity_id: media_player.soundtouch_living_room
-  - service: media_player.turn_off
-    target:
-      entity_id: media_player.soundtouch_kitchen
-play_spotify_everywhere:
-  alias: Play Spotify everywhere
-  sequence:
-  - service: media_player.turn_on
-    target:
-      entity_id: media_player.soundtouch_living_room
-  - service: media_player.turn_on
-    target:
-      entity_id: media_player.soundtouch_kitchen
-  - service: soundtouch.play_everywhere
-    data:
-      master: media_player.soundtouch_living_room
-  - service: media_player.play_media
-    target:
-      entity_id: media_player.soundtouch_living_room
-    data:
-      media_content_id: 1
-      media_content_type: PLAYLIST
-  mode: single
 good_night:
   alias: Good night
   mode: single
   sequence:
+activate_watching_tv:
+  alias: Activate watching tv
+  sequence:
+  - scene: scene.watching_tv
+  mode: single
+  icon: mdi:television
+working_upstairs:
+  alias: Working upstairs
+  mode: single
+  icon: mdi:desk
+  sequence:
+play_spotify:
+  mode: single
+  alias: Play spotify
+  sequence:
+  icon: mdi:music
+play_radioparadise:
+  alias: Play Radioparadise
+  sequence:
+  mode: single
+  icon: mdi:music
+mute_speakers:
+  sequence:
+  mode: single
+  icon: mdi:music
+  alias: Mute speakers

@@ -285,3 +285,17 @@ c2_c9_e2_6b_c6_94:
   icon:
   picture:
   track: true
+
+46_c6_95_8d_e0_19:
+  name: 46_c6_95_8d_e0_19
+  mac: 46:C6:95:8D:E0:19
+  icon:
+  picture:
+  track: true
+
+lwip_2:
+  name: lwip
+  mac: 6A:C6:95:B2:D1:8C
+  icon:
+  picture:
+  track: true

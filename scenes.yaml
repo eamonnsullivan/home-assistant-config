@@ -10,18 +10,9 @@
       supported_color_modes:
       - color_temp
       - hs
-      color_mode: hs
+      color_mode: color_temp
       brightness: 178
-      hs_color:
-      - 38.667
-      - 52.941
-      rgb_color:
-      - 255
-      - 207
-      - 120
-      xy_color:
-      - 0.457
-      - 0.41
+      color_temp: 466
       effect: none
       friendly_name: Couch light
       supported_features: 63
@@ -61,3 +52,4 @@
       friendly_name: Sun room light
       supported_features: 63
       state: 'off'
+  icon: mdi:television
