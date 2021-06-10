@@ -1,16 +1,6 @@
 - id: '1622234078851'
   name: Watching TV
   entities:
-    media_player.appletv:
-      app_id: com.apple.TVAirPlay
-      app_name: AirPlay
-      friendly_name: AppleTV
-      supported_features: 317363
-      state: idle
-    remote.appletv:
-      friendly_name: AppleTV
-      supported_features: 0
-      state: 'on'
     light.hue_color_lamp_3:
       min_mireds: 153
       max_mireds: 500
