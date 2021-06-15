@@ -2,6 +2,7 @@ good_night:
   alias: Good night
   mode: single
   sequence:
+  icon: mdi:bed
 activate_watching_tv:
   alias: Activate watching tv
   sequence:
@@ -28,3 +29,8 @@ mute_speakers:
   mode: single
   icon: mdi:music
   alias: Mute speakers
+meditation:
+  sequence:
+  mode: single
+  alias: Meditation
+  icon: mdi:meditation

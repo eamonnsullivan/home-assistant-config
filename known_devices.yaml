@@ -299,3 +299,24 @@ lwip_2:
   icon:
   picture:
   track: true
+
+peewee:
+  name: peewee
+  mac: B8:27:EB:F9:A8:DF
+  icon:
+  picture:
+  track: true
+
+peewee_2:
+  name: peewee
+  mac: F8:E4:3B:01:4F:66
+  icon:
+  picture:
+  track: true
+
+iphone_3:
+  name: iPhone
+  mac: C6:85:25:32:97:D0
+  icon:
+  picture:
+  track: true
