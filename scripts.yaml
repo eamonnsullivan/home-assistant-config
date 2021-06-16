@@ -34,3 +34,13 @@ meditation:
   mode: single
   alias: Meditation
   icon: mdi:meditation
+'1623873616459':
+  alias: 'Play Radioparadise: kitchen'
+  sequence:
+  mode: single
+  icon: mdi:music
+'1623874692271':
+  alias: 'Play Spotify: kitchen'
+  sequence:
+  mode: single
+  icon: mdi:music
