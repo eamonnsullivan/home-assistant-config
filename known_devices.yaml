@@ -320,3 +320,129 @@ iphone_3:
   icon:
   picture:
   track: true
+
+dc_a6_32_53_1a_cb:
+  name: DC:A6:32:53:1A:CB
+  mac: DC:A6:32:53:1A:CB
+  icon:
+  picture:
+  track: true
+
+6e_c6_95_d7_7b_c1:
+  name: 6E:C6:95:D7:7B:C1
+  mac: 6E:C6:95:D7:7B:C1
+  icon:
+  picture:
+  track: true
+
+ca_c6_95_32_97_d0:
+  name: CA:C6:95:32:97:D0
+  mac: CA:C6:95:32:97:D0
+  icon:
+  picture:
+  track: true
+
+da_c6_95_6f_1f_c3:
+  name: DA:C6:95:6F:1F:C3
+  mac: DA:C6:95:6F:1F:C3
+  icon:
+  picture:
+  track: true
+
+6a_c6_95_99_24_d4:
+  name: 6A:C6:95:99:24:D4
+  mac: 6A:C6:95:99:24:D4
+  icon:
+  picture:
+  track: true
+
+6a_c6_95_a9_8e_2e:
+  name: 6A:C6:95:A9:8E:2E
+  mac: 6A:C6:95:A9:8E:2E
+  icon:
+  picture:
+  track: true
+
+6a_c6_95_bc_eb_fc:
+  name: 6A:C6:95:BC:EB:FC
+  mac: 6A:C6:95:BC:EB:FC
+  icon:
+  picture:
+  track: true
+
+iphone_4:
+  name: iPhone
+  mac: 92:C6:95:FA:AF:43
+  icon:
+  picture:
+  track: true
+
+kathleensiphone_2:
+  name: KathleensiPhone
+  mac: 5A:C6:95:3F:26:74
+  icon:
+  picture:
+  track: true
+
+7a_c6_95_97_65_fe:
+  name: 7A:C6:95:97:65:FE
+  mac: 7A:C6:95:97:65:FE
+  icon:
+  picture:
+  track: true
+
+ce_c6_95_4d_74_73:
+  name: ce_c6_95_4d_74_73
+  mac: CE:C6:95:4D:74:73
+  icon:
+  picture:
+  track: true
+
+d4_a6_51_cb_67_90:
+  name: D4:A6:51:CB:67:90
+  mac: D4:A6:51:CB:67:90
+  icon:
+  picture:
+  track: true
+
+d4_a6_51_cb_81_7a:
+  name: D4:A6:51:CB:81:7A
+  mac: D4:A6:51:CB:81:7A
+  icon:
+  picture:
+  track: true
+
+d4_a6_51_c3_d0_20:
+  name: D4:A6:51:C3:D0:20
+  mac: D4:A6:51:C3:D0:20
+  icon:
+  picture:
+  track: true
+
+6a_c6_95_c3_d0_20:
+  name: 6A:C6:95:C3:D0:20
+  mac: 6A:C6:95:C3:D0:20
+  icon:
+  picture:
+  track: true
+
+6a_c6_95_22_d0_a3:
+  name: 6A:C6:95:22:D0:A3
+  mac: 6A:C6:95:22:D0:A3
+  icon:
+  picture:
+  track: true
+
+tapo_smartplug_2:
+  name: Tapo_SmartPlug
+  mac: 6A:C6:95:91:84:45
+  icon:
+  picture:
+  track: true
+
+6a_c6_95_13_94_9b:
+  name: 6A:C6:95:13:94:9B
+  mac: 6A:C6:95:13:94:9B
+  icon:
+  picture:
+  track: true
