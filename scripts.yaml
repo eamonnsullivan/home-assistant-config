@@ -44,3 +44,13 @@ meditation:
   sequence:
   mode: single
   icon: mdi:music
+'1624956145188':
+  mode: single
+  alias: Play Radio 4
+  sequence:
+  icon: mdi:radio
+'1624956174078':
+  mode: single
+  alias: Play Radio 4:Kitchen
+  sequence:
+  icon: mdi:radio
