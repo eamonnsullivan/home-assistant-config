@@ -8,3 +8,5 @@ tts/
 *.db
 *.db-shm
 *.db-wal
+*.pyc
+__pycache__
