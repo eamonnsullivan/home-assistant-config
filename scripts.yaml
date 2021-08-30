@@ -54,3 +54,8 @@ meditation:
   alias: Play Radio 4:Kitchen
   sequence:
   icon: mdi:radio
+reset_good_night_trigger:
+  alias: Reset good night trigger
+  sequence:
+  mode: single
+  icon: mdi:bed
