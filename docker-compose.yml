@@ -6,6 +6,7 @@ services:
     volumes:
       - /home/eamonn/home_assistant:/config
       - /etc/localtime:/etc/localtime:ro
+      - /home/eamonn/media:/media
     restart: unless-stopped
     network_mode: host
   nodered:

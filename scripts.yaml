@@ -29,11 +29,6 @@ mute_speakers:
   mode: single
   icon: mdi:music
   alias: Mute speakers
-meditation:
-  sequence:
-  mode: single
-  alias: Meditation
-  icon: mdi:meditation
 '1623873616459':
   alias: 'Play Radioparadise: kitchen'
   sequence:
@@ -59,3 +54,58 @@ reset_good_night_trigger:
   sequence:
   mode: single
   icon: mdi:bed
+'1631711857593':
+  alias: Coffee time
+  mode: single
+  sequence:
+  icon: mdi:coffee
+'1632663469983':
+  alias: wind down
+  sequence:
+  mode: single
+  icon: mdi:meditation
+meditate_for_10_minutes:
+  sequence:
+  mode: single
+  alias: Meditate for 10 minutes
+  icon: mdi:meditation
+meditate_for_20_minutes:
+  alias: Meditate for 20 minutes
+  sequence:
+  mode: single
+  icon: mdi:meditation
+meditate_for_30_minutes:
+  alias: Meditate for 30 minutes
+  sequence:
+  mode: single
+  icon: mdi:meditation
+meditate_for_45_minutes:
+  alias: Meditate for 45 minutes
+  sequence:
+  mode: single
+  icon: mdi:meditation
+hue_button_pressed:
+  alias: Hue button pressed
+  sequence:
+  mode: single
+  icon: mdi:gesture-tap-button
+hue_button_long_pressed:
+  alias: Hue button long pressed
+  sequence:
+  mode: single
+  icon: mdi:gesture-tap-button
+hue_dimmer_pressed:
+  alias: Hue dimmer pressed
+  sequence:
+  mode: single
+  icon: mdi:gesture-tap-button
+hue_dimmer_long_pressed:
+  alias: Hue dimmer long pressed
+  sequence:
+  mode: single
+  icon: mdi:gesture-tap-button
+start_meditation:
+  alias: Start meditation
+  sequence:
+  mode: single
+  icon: mdi:meditation

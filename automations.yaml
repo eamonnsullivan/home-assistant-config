@@ -32,3 +32,63 @@
     target:
       entity_id: light.whole_house
   mode: single
+- id: '1633370443490'
+  alias: Hue button pressed
+  description: ''
+  trigger:
+  - device_id: 2341d2a8be724f4c9929d49168040eef
+    domain: hue
+    platform: device
+    type: remote_button_short_release
+    subtype: turn_on
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.hue_button_pressed
+  mode: single
+- id: '1633370488207'
+  alias: Hue button long pressed
+  description: ''
+  trigger:
+  - device_id: 2341d2a8be724f4c9929d49168040eef
+    domain: hue
+    platform: device
+    type: remote_button_long_release
+    subtype: turn_on
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.hue_button_long_pressed
+  mode: single
+- id: '1633450987940'
+  alias: Hue dimmer pressed
+  description: ''
+  trigger:
+  - device_id: f2944869d5973b00e81586d6bb9459e1
+    domain: hue
+    platform: device
+    type: remote_button_short_release
+    subtype: turn_on
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.hue_dimmer_pressed
+  mode: single
+- id: '1633451029488'
+  alias: Hue dimmer long pressed
+  description: ''
+  trigger:
+  - device_id: f2944869d5973b00e81586d6bb9459e1
+    domain: hue
+    platform: device
+    type: remote_button_long_release
+    subtype: turn_on
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.hue_dimmer_long_pressed
+  mode: single
