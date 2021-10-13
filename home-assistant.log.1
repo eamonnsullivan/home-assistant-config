@@ -1,11 +1,11 @@
-2021-10-04 21:35:11 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration nodered which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2021-10-04 21:35:11 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration tapo_p100_control which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2021-10-04 21:35:23 ERROR (MainThread) [snitun.client.client_peer] Challenge/Response error with SniTun server
-2021-10-04 21:35:23 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
-2021-10-04 21:35:25 ERROR (SyncWorker_3) [custom_components.tapo_p100_control.switch] Could not connect to plug. Possibly invalid credentials
-2021-10-04 21:35:28 ERROR (MainThread) [homeassistant.components.switch] Error while setting up tapo_p100_control platform for switch
+2021-10-13 18:23:17 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration tapo_p100_control which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2021-10-13 18:23:17 WARNING (SyncWorker_1) [homeassistant.loader] We found a custom integration nodered which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2021-10-13 18:23:28 ERROR (SyncWorker_2) [custom_components.tapo_p100_control.switch] Could not connect to plug. Possibly invalid credentials
+2021-10-13 18:23:28 WARNING (MainThread) [homeassistant.components.netgear.device_tracker] Your Netgear configuration has been imported into the UI, please remove it from configuration.yaml. Loading Netgear via platform setup is now deprecated
+2021-10-13 18:23:28 ERROR (MainThread) [homeassistant.components.device_tracker] Error setting up platform legacy netgear
+2021-10-13 18:23:29 ERROR (MainThread) [homeassistant.components.media_player] Error while setting up soundtouch platform for media_player
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 169, in _new_conn
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
     conn = connection.create_connection(
   File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 96, in create_connection
     raise err
@@ -20,7 +20,7 @@ Traceback (most recent call last):
     httplib_response = self._make_request(
   File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 394, in _make_request
     conn.request(method, url, **httplib_request_kw)
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 234, in request
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
   File "/usr/local/lib/python3.9/http/client.py", line 1279, in request
     self._send_request(method, url, body, headers, encode_chunked)
@@ -32,11 +32,11 @@ Traceback (most recent call last):
     self.send(msg)
   File "/usr/local/lib/python3.9/http/client.py", line 974, in send
     self.connect()
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 200, in connect
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
     conn = self._new_conn()
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 181, in _new_conn
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xe911a2e0>: Failed to establish a new connection: [Errno 113] Host is unreachable
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xecd43280>: Failed to establish a new connection: [Errno 113] Host is unreachable
 
 During handling of the above exception, another exception occurred:
 
@@ -47,7 +47,81 @@ Traceback (most recent call last):
     retries = retries.increment(
   File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 574, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.204', port=80): Max retries exceeded with url: /app (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xe911a2e0>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.202', port=8090): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xecd43280>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 249, in _async_setup_platform
+    await asyncio.shield(task)
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/soundtouch/media_player.py", line 121, in setup_platform
+    bose_soundtouch_entity = SoundTouchDevice(name, remote_config)
+  File "/usr/src/homeassistant/homeassistant/components/soundtouch/media_player.py", line 196, in __init__
+    self._device = soundtouch_device(config["host"], config["port"])
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/__init__.py", line 23, in soundtouch_device
+    s_device = SoundTouchDevice(host, port)
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 122, in __init__
+    self.__init_config()
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 136, in __init_config
+    response = requests.get(
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.202', port=8090): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xecd43280>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
+2021-10-13 18:23:31 ERROR (MainThread) [homeassistant.components.switch] Error while setting up tapo_p100_control platform for switch
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 96, in create_connection
+    raise err
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+OSError: [Errno 113] Host is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.9/http/client.py", line 1279, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1325, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1034, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xecd60d30>: Failed to establish a new connection: [Errno 113] Host is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.204', port=80): Max retries exceeded with url: /app (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xecd60d30>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
 
 During handling of the above exception, another exception occurred:
 
@@ -64,7 +138,7 @@ Traceback (most recent call last):
     self._p100.handshake()
   File "/usr/local/lib/python3.9/site-packages/PyP100/PyP100.py", line 114, in handshake
     r = requests.post(URL, json=Payload)
-  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 119, in post
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 117, in post
     return request('post', url, data=data, json=json, **kwargs)
   File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 61, in request
     return session.request(method=method, url=url, **kwargs)
@@ -74,10 +148,10 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.204', port=80): Max retries exceeded with url: /app (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xe911a2e0>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
-2021-10-04 21:35:44 ERROR (SyncWorker_4) [pynetgear] Error talking to API
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.204', port=80): Max retries exceeded with url: /app (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xecd60d30>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
+2021-10-13 18:23:33 ERROR (SyncWorker_4) [pynetgear] Error talking to API
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 169, in _new_conn
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
     conn = connection.create_connection(
   File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 73, in create_connection
     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
@@ -92,7 +166,7 @@ Traceback (most recent call last):
     httplib_response = self._make_request(
   File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 394, in _make_request
     conn.request(method, url, **httplib_request_kw)
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 234, in request
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
   File "/usr/local/lib/python3.9/http/client.py", line 1279, in request
     self._send_request(method, url, body, headers, encode_chunked)
@@ -104,11 +178,11 @@ Traceback (most recent call last):
     self.send(msg)
   File "/usr/local/lib/python3.9/http/client.py", line 974, in send
     self.connect()
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 200, in connect
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
     conn = self._new_conn()
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 181, in _new_conn
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xe8e23cd0>: Failed to establish a new connection: [Errno -3] Try again
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xec7a9e68>: Failed to establish a new connection: [Errno -3] Try again
 
 During handling of the above exception, another exception occurred:
 
@@ -119,14 +193,14 @@ Traceback (most recent call last):
     retries = retries.increment(
   File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 574, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='routerlogin.net', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xe8e23cd0>: Failed to establish a new connection: [Errno -3] Try again'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='routerlogin.net', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xec7a9e68>: Failed to establish a new connection: [Errno -3] Try again'))
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.9/site-packages/pynetgear/__init__.py", line 374, in _make_request
+  File "/usr/local/lib/python3.9/site-packages/pynetgear/__init__.py", line 480, in _make_request
     response = requests.post(self.soap_url, headers=headers,
-  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 119, in post
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 117, in post
     return request('post', url, data=data, json=json, **kwargs)
   File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 61, in request
     return session.request(method=method, url=url, **kwargs)
@@ -136,10 +210,10 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='routerlogin.net', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xe8e23cd0>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-10-04 21:35:49 ERROR (SyncWorker_4) [pynetgear] Error talking to API
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='routerlogin.net', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xec7a9e68>: Failed to establish a new connection: [Errno -3] Try again'))
+2021-10-13 18:23:38 ERROR (SyncWorker_4) [pynetgear] Error talking to API
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 169, in _new_conn
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
     conn = connection.create_connection(
   File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 73, in create_connection
     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
@@ -154,7 +228,7 @@ Traceback (most recent call last):
     httplib_response = self._make_request(
   File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 394, in _make_request
     conn.request(method, url, **httplib_request_kw)
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 234, in request
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
   File "/usr/local/lib/python3.9/http/client.py", line 1279, in request
     self._send_request(method, url, body, headers, encode_chunked)
@@ -166,11 +240,11 @@ Traceback (most recent call last):
     self.send(msg)
   File "/usr/local/lib/python3.9/http/client.py", line 974, in send
     self.connect()
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 200, in connect
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
     conn = self._new_conn()
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 181, in _new_conn
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xf1bebf58>: Failed to establish a new connection: [Errno -3] Try again
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xe8c9b0e8>: Failed to establish a new connection: [Errno -3] Try again
 
 During handling of the above exception, another exception occurred:
 
@@ -181,14 +255,14 @@ Traceback (most recent call last):
     retries = retries.increment(
   File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 574, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='routerlogin.net', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xf1bebf58>: Failed to establish a new connection: [Errno -3] Try again'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='routerlogin.net', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xe8c9b0e8>: Failed to establish a new connection: [Errno -3] Try again'))
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.9/site-packages/pynetgear/__init__.py", line 374, in _make_request
+  File "/usr/local/lib/python3.9/site-packages/pynetgear/__init__.py", line 480, in _make_request
     response = requests.post(self.soap_url, headers=headers,
-  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 119, in post
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 117, in post
     return request('post', url, data=data, json=json, **kwargs)
   File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 61, in request
     return session.request(method=method, url=url, **kwargs)
@@ -198,128 +272,522 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='routerlogin.net', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xf1bebf58>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-10-04 21:35:49 ERROR (SyncWorker_4) [pynetgear] Get attached devices failed
-2021-10-04 21:35:49 ERROR (SyncWorker_4) [homeassistant.components.netgear.device_tracker] Failed to Login
-2021-10-04 21:35:49 ERROR (MainThread) [homeassistant.components.device_tracker] Error setting up platform legacy netgear
-2021-10-04 22:10:41 ERROR (MainThread) [homeassistant.components.apple_tv.remote] Unable to send commands, not connected to AppleTV
-2021-10-04 22:47:22 ERROR (MainThread) [homeassistant.components.shelly] Error fetching Forest room Sensor data: Sleeping device did not update
-2021-10-05 01:16:47 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.1.19):8009] Heartbeat timeout, resetting connection
-2021-10-05 01:16:54 ERROR (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.1.19):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.1.19', 8009)), retrying in 5.0s
-2021-10-05 07:01:39 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:01:39 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:01:44 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:01:44 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:01:44 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:01:44 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:01:44 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:01:50 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:01:52 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:01:56 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:02:02 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:02:04 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:02:04 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:02:04 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:02:14 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:02:29 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:02:49 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:02:55 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:03:03 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:03:03 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:03:03 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:03:08 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:03:16 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:03:18 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:03:18 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:03:18 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:04:01 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:04:11 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:04:17 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:04:17 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:04:17 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:04:17 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:05:00 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:05:17 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:05:19 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:05:21 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:05:23 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:05:25 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:05:55 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:05:57 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:05:57 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:06:26 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:06:26 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:06:26 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:06:41 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:07:28 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:07:28 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:07:28 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:07:28 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:07:40 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:07:56 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:08:04 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:08:04 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:08:11 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:09:47 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:11:03 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:12:04 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:12:04 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:12:14 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:13:06 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:13:06 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:13:08 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:14:07 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:14:07 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:14:07 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:15:08 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:15:08 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:15:08 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:15:10 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:16:12 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:17:13 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:18:13 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:19:22 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:20:22 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:22:14 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:22:16 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:22:23 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:22:23 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:22:25 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:22:27 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:22:27 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:22:59 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:23:30 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:24:17 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:24:46 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:26:02 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:26:39 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:31:36 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:32:37 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:34:44 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:34:44 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:34:48 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:36:45 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:38:03 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:40:32 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:41:09 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:45:19 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:56:41 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:56:41 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:56:53 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:56:53 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:56:53 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:56:55 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:56:55 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:57:48 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:58:05 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:58:05 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:58:05 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:58:05 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:58:07 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:58:12 WARNING (MainThread) [homeassistant.components.webhook] Received message for unregistered webhook e3cbd383fd305764fbb5bf280a406bdd7a930d5cc1b3f4d054837d88a96711bc from 192.168.1.19
-2021-10-05 07:58:27 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:58:34 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://remotestate.nabucasa.com/request_sync (500)
-2021-10-05 07:58:52 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:58:52 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:58:52 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
-2021-10-05 07:58:52 ERROR (MainThread) [snitun.client.connector] Can't connect to endpoint 127.0.0.1:58073
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='routerlogin.net', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xe8c9b0e8>: Failed to establish a new connection: [Errno -3] Try again'))
+2021-10-13 18:23:59 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:23:59 WARNING (SyncWorker_7) [homeassistant.components.soundtouch.media_player] Unable to create zone without slaves
+2021-10-13 18:25:30 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:25:35 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:25:35 WARNING (SyncWorker_5) [homeassistant.components.soundtouch.media_player] Unable to create zone without slaves
+2021-10-13 18:27:23 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:30:21 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:30:21 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:30:25 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:30:25 WARNING (SyncWorker_5) [homeassistant.components.soundtouch.media_player] Unable to create zone without slaves
+2021-10-13 18:30:25 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:30:25 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection] [3983781744] HTTPConnectionPool(host='192.168.1.201', port=8091): Max retries exceeded with url: /AVTransport/Control (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xe6d2bf10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 96, in create_connection
+    raise err
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.9/http/client.py", line 1279, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1325, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1034, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xe6d2bf10>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.201', port=8091): Max retries exceeded with url: /AVTransport/Control (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xe6d2bf10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 185, in handle_call_service
+    await hass.services.async_call(
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1491, in async_call
+    task.result()
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1526, in _execute_service
+    await handler.job.target(service_call)
+  File "/usr/src/homeassistant/homeassistant/components/tts/__init__.py", line 201, in async_say_handle
+    await hass.services.async_call(
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1491, in async_call
+    task.result()
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1526, in _execute_service
+    await handler.job.target(service_call)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_component.py", line 213, in handle_service
+    await self.hass.helpers.service.entity_service_call(
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 658, in entity_service_call
+    future.result()  # pop exception if have
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 830, in async_request_call
+    await coro
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 695, in _handle_entity_call
+    await result
+  File "/usr/src/homeassistant/homeassistant/components/media_player/__init__.py", line 699, in async_play_media
+    await self.hass.async_add_executor_job(
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/soundtouch/media_player.py", line 360, in play_media
+    self._device.play_url(str(media_id))
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 446, in play_url
+    requests.post(
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.201', port=8091): Max retries exceeded with url: /AVTransport/Control (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xe6d2bf10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2021-10-13 18:30:49 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:30:49 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:30:59 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:31:18 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2021-10-13 18:31:28 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2021-10-13 18:31:38 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2021-10-13 18:31:48 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2021-10-13 18:31:58 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2021-10-13 18:32:08 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2021-10-13 18:32:18 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2021-10-13 18:32:28 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2021-10-13 18:32:38 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2021-10-13 18:32:48 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2021-10-13 18:32:57 ERROR (MainThread) [homeassistant.core] Error executing service: <ServiceCall media_player.turn_off (c:78e54134f475ce5a17d5ba2ee6cf8471): entity_id=['media_player.soundtouch_living_room', 'media_player.soundtouch_kitchen']>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.9/http/client.py", line 1371, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.9/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.9/http/client.py", line 288, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 532, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.9/http/client.py", line 1371, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.9/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.9/http/client.py", line 288, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1507, in catch_exceptions
+    await coro_or_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1526, in _execute_service
+    await handler.job.target(service_call)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_component.py", line 213, in handle_service
+    await self.hass.helpers.service.entity_service_call(
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 658, in entity_service_call
+    future.result()  # pop exception if have
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 830, in async_request_call
+    await coro
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 695, in _handle_entity_call
+    await result
+  File "/usr/src/homeassistant/homeassistant/components/media_player/__init__.py", line 627, in async_turn_off
+    await self.hass.async_add_executor_job(self.turn_off)
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/soundtouch/media_player.py", line 265, in turn_off
+    self._device.power_off()
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 581, in power_off
+    self._send_key(Key.POWER.value)
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 395, in _send_key
+    requests.post('http://' + self._host + ":" +
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2021-10-13 18:32:57 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.soundtouch_living_room fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 96, in create_connection
+    raise err
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.9/http/client.py", line 1279, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1325, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1034, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xecb2b6d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.201', port=8090): Max retries exceeded with url: /now_playing (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xecb2b6d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 438, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 625, in async_device_update
+    raise exc
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/soundtouch/media_player.py", line 218, in update
+    self._status = self._device.status()
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 482, in status
+    self.refresh_status()
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 243, in refresh_status
+    response = requests.get(
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.201', port=8090): Max retries exceeded with url: /now_playing (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xecb2b6d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2021-10-13 18:32:58 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.soundtouch_living_room fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 96, in create_connection
+    raise err
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.9/http/client.py", line 1279, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1325, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1034, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xe6e03178>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.201', port=8090): Max retries exceeded with url: /now_playing (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xe6e03178>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 438, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 625, in async_device_update
+    raise exc
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/soundtouch/media_player.py", line 218, in update
+    self._status = self._device.status()
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 482, in status
+    self.refresh_status()
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 243, in refresh_status
+    response = requests.get(
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.201', port=8090): Max retries exceeded with url: /now_playing (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xe6e03178>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2021-10-13 18:33:18 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2021-10-13 18:33:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.soundtouch_living_room is taking over 10 seconds
+2021-10-13 18:33:28 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2021-10-13 18:33:38 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2021-10-13 18:33:43 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.soundtouch_living_room fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 96, in create_connection
+    raise err
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+OSError: [Errno 113] Host is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.9/http/client.py", line 1279, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1325, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1034, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xe6650160>: Failed to establish a new connection: [Errno 113] Host is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.201', port=8090): Max retries exceeded with url: /now_playing (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xe6650160>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 438, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 633, in async_device_update
+    await task
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/soundtouch/media_player.py", line 218, in update
+    self._status = self._device.status()
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 482, in status
+    self.refresh_status()
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 243, in refresh_status
+    response = requests.get(
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.201', port=8090): Max retries exceeded with url: /now_playing (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xe6650160>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
+2021-10-13 18:38:39 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:38:40 WARNING (SyncWorker_2) [homeassistant.components.soundtouch.media_player] Unable to create zone without slaves
+2021-10-13 18:39:23 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:39:28 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:39:28 WARNING (SyncWorker_4) [homeassistant.components.soundtouch.media_player] Unable to create zone without slaves
+2021-10-13 18:40:24 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:45:35 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:45:35 WARNING (SyncWorker_6) [homeassistant.components.soundtouch.media_player] Unable to create zone without slaves
+2021-10-13 18:45:59 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:46:12 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:46:12 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.soundtouch_kitchen
+2021-10-13 18:46:27 ERROR (SyncWorker_5) [spotipy.client] HTTP Error for PUT to https://api.spotify.com/v1/me/player/shuffle?state=true returned 404 due to Player command failed: No active device found
+2021-10-13 18:46:27 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection] [3983781744] No active playback device found
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 185, in handle_call_service
+    await hass.services.async_call(
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1491, in async_call
+    task.result()
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1526, in _execute_service
+    await handler.job.target(service_call)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_component.py", line 213, in handle_service
+    await self.hass.helpers.service.entity_service_call(
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 658, in entity_service_call
+    future.result()  # pop exception if have
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 830, in async_request_call
+    await coro
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 695, in _handle_entity_call
+    await result
+  File "/usr/src/homeassistant/homeassistant/components/media_player/__init__.py", line 733, in async_set_shuffle
+    await self.hass.async_add_executor_job(self.set_shuffle, shuffle)
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/spotify/media_player.py", line 220, in wrapper
+    raise HomeAssistantError("No active playback device found") from None
+homeassistant.exceptions.HomeAssistantError: No active playback device found
+2021-10-13 18:47:37 WARNING (Thread-10) [homeassistant.util.executor] Thread[SyncWorker_4] is still running at shutdown: File "/usr/local/lib/python3.9/threading.py", line 930, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/local/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.9/threading.py", line 910, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 77, in _worker
+    work_item.run()
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.9/site-packages/pynetgear/__init__.py", line 200, in get_attached_devices
+    success, response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/pynetgear/__init__.py", line 480, in _make_request
+    response = requests.post(self.soap_url, headers=headers,
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.9/http/client.py", line 1371, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.9/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.9/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+2021-10-13 18:47:38 WARNING (Thread-10) [homeassistant.util.executor] Thread[SyncWorker_4] is still running at shutdown: File "/usr/local/lib/python3.9/threading.py", line 930, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/local/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.9/threading.py", line 910, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 77, in _worker
+    work_item.run()
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.9/site-packages/pynetgear/__init__.py", line 200, in get_attached_devices
+    success, response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/pynetgear/__init__.py", line 480, in _make_request
+    response = requests.post(self.soap_url, headers=headers,
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.9/http/client.py", line 1371, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.9/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.9/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)

@@ -1,0 +1,4 @@
+{"k":"{\"nodeId\":1,\"commandClass\":114,\"endpoint\":0,\"property\":\"manufacturerId\"}","v":{"type":"number","readable":true,"writeable":false,"min":0,"max":65535,"label":"Manufacturer ID"}}
+{"k":"{\"nodeId\":1,\"commandClass\":114,\"endpoint\":0,\"property\":\"productType\"}","v":{"type":"number","readable":true,"writeable":false,"min":0,"max":65535,"label":"Product type"}}
+{"k":"{\"nodeId\":1,\"commandClass\":114,\"endpoint\":0,\"property\":\"productId\"}","v":{"type":"number","readable":true,"writeable":false,"min":0,"max":65535,"label":"Product ID"}}
+{"k":"{\"nodeId\":1,\"commandClass\":134,\"endpoint\":0,\"property\":\"firmwareVersions\"}","v":{"type":"string[]","readable":true,"writeable":false,"label":"Z-Wave chip firmware versions"}}
