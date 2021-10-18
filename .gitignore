@@ -3,6 +3,7 @@ secrets.yaml
 tts/
 .cloud/
 .storage/
+store/
 .HA_VERSION
 *.log
 *.db

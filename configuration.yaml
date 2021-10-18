@@ -32,6 +32,18 @@ media_player:
     host: 192.168.1.202
     port: 8090
     name: Soundtouch Kitchen
+  - platform: group
+    name: Google Home
+    entities:
+      - media_player.bedroom_speaker
+      - media_player.living_room_speaker
+  - platform: group
+    name: Announcements
+    entities:
+      - media_player.soundtouch_kitchen
+      - media_player.soundtouch_living_room
+      - media_player.bedroom_speaker
+
 
 spotify:
   client_id: 0185bb658f774eb2b288e43c978c8ba1
@@ -66,9 +78,3 @@ sensor:
 
 mqtt:
   broker: localhost
-
-switch:
-    platform: tapo_p100_control
-    ip_address: 192.168.1.204
-    email: eamonn.sullivan@gmail.com
-    password: !secret tplink_password

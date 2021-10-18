@@ -4,3 +4,7 @@ script.1624956145188: {}
 script.spring_blossom: {}
 script.1632663469983: {}
 script.1633365189643: {}
+sensor.electric_consumption_today:
+  friendly_name: Electric Consumption
+sensor.gas_consumption_today:
+  friendly_name: Gas Consumption
