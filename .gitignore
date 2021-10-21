@@ -5,7 +5,7 @@ tts/
 .storage/
 store/
 .HA_VERSION
-*.log
+*.log*
 *.db
 *.db-shm
 *.db-wal
