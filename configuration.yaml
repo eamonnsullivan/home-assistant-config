@@ -49,11 +49,11 @@ spotify:
   client_id: 0185bb658f774eb2b288e43c978c8ba1
   client_secret: !secret spotify_secret
 
-device_tracker:
-  - platform: netgear
-    password: !secret router_password
-    new_device_defaults:
-      track_new_devices: true
+# device_tracker:
+#   - platform: netgear
+#     password: !secret router_password
+#     new_device_defaults:
+#       track_new_devices: true
 
 sensor:
   - platform: systemmonitor

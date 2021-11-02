@@ -8,3 +8,4 @@ sensor.electric_consumption_today:
   friendly_name: Electric Consumption
 sensor.gas_consumption_today:
   friendly_name: Gas Consumption
+zone.home: {}

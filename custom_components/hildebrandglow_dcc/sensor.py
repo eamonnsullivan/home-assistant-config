@@ -5,17 +5,16 @@ from typing import Any, Callable, Dict, Optional
 
 from homeassistant.components.sensor import (
     DEVICE_CLASS_ENERGY,
-    DEVICE_CLASS_GAS,
     DEVICE_CLASS_MONETARY,
     STATE_CLASS_MEASUREMENT,
     STATE_CLASS_TOTAL_INCREASING,
     SensorEntity,
 )
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import ENERGY_KILO_WATT_HOUR, VOLUME_CUBIC_METERS
+from homeassistant.const import ENERGY_KILO_WATT_HOUR
 from homeassistant.core import HomeAssistant
 
-from .const import DEFAULT_CALORIFIC_VALUE, DEFAULT_VOLUME_CORRECTION, DOMAIN
+from .const import DOMAIN
 from .glow import Glow, InvalidAuth
 
 _LOGGER = logging.getLogger(__name__)
@@ -63,17 +62,13 @@ async def async_setup_entry(
                 new_entities.append(base_sensor)
                 meters[resource["classifier"]] = base_sensor
 
+                cumulative_sensor = GlowCumulative(glow, resource, config)
+                new_entities.append(cumulative_sensor)
+
                 rate_sensor = GlowStanding(glow, resource, config)
                 new_entities.append(rate_sensor)
-                tariff_sensor = GlowRate(glow, resource, config, rate_sensor, False)
+                tariff_sensor = GlowRate(glow, resource, config, rate_sensor)
                 new_entities.append(tariff_sensor)
-
-                if resource["classifier"] == "gas.consumption":
-                    m3sensor = GlowUsageMetric(glow, resource, config, base_sensor)
-                    new_entities.append(m3sensor)
-
-                    t3sensor = GlowRate(glow, resource, config, rate_sensor, True)
-                    new_entities.append(t3sensor)
 
         for resource in resources:
             if resource["classifier"] in cost_classifiers:
@@ -141,7 +136,8 @@ class GlowUsage(SensorEntity):
         elif self.resource["dataSourceResourceTypeInfo"]["type"] == "GAS":
             human_type = "Gas"
         else:
-            print(self.resource)
+            _err = self.resource["dataSourceResourceTypeInfo"]["type"]
+            _LOGGER.debug("Unknown type: %s", _err)
 
         if self.meter:
             resource = self.meter.resource["resourceId"]
@@ -175,7 +171,8 @@ class GlowUsage(SensorEntity):
                     return round(res, 2)
                 return round(res, 3)
             except (KeyError, IndexError, TypeError) as _error:
-                _LOGGER.error("Lookup Error - data (%s): (%s)", _error, self._state)
+                _LOGGER.error("Lookup Error - data (%s): (%s)",
+                              _error, self._state)
                 return None
         return None
 
@@ -210,63 +207,29 @@ class GlowUsage(SensorEntity):
         await self._glow_update(self.glow.current_usage)
 
 
-class GlowUsageMetric(GlowUsage):
-    """Metric version of the sensor."""
-
-    def __init__(
-        self,
-        glow: Glow,
-        resource: Dict[str, Any],
-        config: ConfigEntry,
-        buddy: GlowUsage,
-    ):
-        """Initialize the sensor."""
-        super().__init__(glow, resource, config)
-
-        self.buddy = buddy
-
-        correction = DEFAULT_VOLUME_CORRECTION
-        calorific = DEFAULT_CALORIFIC_VALUE
-
-        if "correction" in config.data:
-            correction = config.data["correction"]
-        if "calorific" in config.data:
-            calorific = config.data["calorific"]
-        self.conversion = 3.6 / correction / calorific
+class GlowCumulative(GlowUsage):
+    """Sensor object for the Glowmarkt resource's current yearly consumption."""
 
     @property
     def unique_id(self) -> str:
         """Return a unique identifier string for the sensor."""
-        return self.resource["resourceId"] + "-metric"
-
-    @property
-    def device_class(self) -> str:
-        """Return the device class (always DEVICE_CLASS_GAS)."""
-        return DEVICE_CLASS_GAS
-
-    @property
-    def unit_of_measurement(self) -> Optional[str]:
-        """Return the unit of measurement."""
-        if self._state is not None:
-            return VOLUME_CUBIC_METERS
-        return None
-
-    @property
-    def state(self) -> Optional[str]:
-        """Return the state of the sensor."""
-        kwh = self.buddy.state
-        if kwh is not None:
-            return round(kwh * self.conversion, 4)
-        return None
+        return self.resource["resourceId"] + "-cumulative"
 
     @property
     def name(self) -> str:
         """Return the name of the sensor."""
-        return "Gas Consumption Metric (Today)"
+        if self.resource["classifier"] == "gas.consumption":
+            return "Gas Consumption (Year)"
+        if self.resource["classifier"] == "electricity.consumption":
+            return "Electric Consumption (Year)"
+        return None
 
     async def async_update(self) -> None:
-        """Fetch new state data for the sensor. - read from Buddy"""
-        self._state = self.buddy.rawdata
+        """Fetch new state data for the sensor.
+
+        This is the only method that should fetch new data for Home Assistant.
+        """
+        await self._glow_update(self.glow.cumulative_usage)
 
 
 class GlowStanding(GlowUsage):
@@ -306,9 +269,11 @@ class GlowStanding(GlowUsage):
 
             except (KeyError, IndexError, TypeError) as _error:
                 if plan is None:
-                    _LOGGER.error("Lookup Error - plan (%s): (%s)", _error, self._state)
+                    _LOGGER.error("Lookup Error - plan (%s): (%s)",
+                                  _error, self._state)
                 else:
-                    _LOGGER.error("Lookup Error - standing (%s): (%s)", _error, plan)
+                    _LOGGER.error(
+                        "Lookup Error - standing (%s): (%s)", _error, plan)
                 return None
 
         return None
@@ -334,44 +299,27 @@ class GlowStanding(GlowUsage):
 class GlowRate(GlowStanding):
     """Sensor object for the Glowmarkt resource's current unit tariff."""
 
-    # pylint: disable=too-many-arguments
     def __init__(
         self,
         glow: Glow,
         resource: Dict[str, Any],
         config: ConfigEntry,
         buddy: GlowStanding,
-        metric: bool,
     ):
         """Initialize the sensor."""
         super().__init__(glow, resource, config)
 
         self.buddy = buddy
-        self.metric = metric
-
-        if metric:
-            correction = DEFAULT_VOLUME_CORRECTION
-            calorific = DEFAULT_CALORIFIC_VALUE
-
-            if "correction" in config.data:
-                correction = config.data["correction"]
-            if "calorific" in config.data:
-                calorific = config.data["calorific"]
-            self.conversion = 3.6 / correction / calorific
 
     @property
     def unique_id(self) -> str:
         """Return a unique identifier string for the sensor."""
-        if self.metric:
-            return self.resource["resourceId"] + "-rate-metric"
         return self.resource["resourceId"] + "-rate"
 
     @property
     def name(self) -> str:
         """Return the name of the sensor."""
         if self.resource["classifier"] == "gas.consumption":
-            if self.metric:
-                return "Gas Tariff Rate (Metric)"
             return "Gas Tariff Rate"
 
         if self.resource["classifier"] == "electricity.consumption":
@@ -382,8 +330,6 @@ class GlowRate(GlowStanding):
     @property
     def unit_of_measurement(self) -> Optional[str]:
         """Return the unit of measurement."""
-        if self.metric:
-            return "GBP/m³"
         return "GBP/kWh"
 
     @property
@@ -395,14 +341,13 @@ class GlowRate(GlowStanding):
                 plan = self._state["data"][0]["currentRates"]
                 rate = plan["rate"]
                 rate = float(rate) / 100
-                if self.metric:
-                    rate = rate / self.conversion
 
                 return round(rate, 4)
 
             except (KeyError, IndexError, TypeError) as _error:
                 if plan is None:
-                    _LOGGER.error("Key Error - plan (%s): (%s)", _error, self._state)
+                    _LOGGER.error("Key Error - plan (%s): (%s)",
+                                  _error, self._state)
                 else:
                     _LOGGER.error("Key Error - rate (%s): (%s)", _error, plan)
                 return None
