@@ -23,6 +23,7 @@ class Glow:
         """Create an authenticated Glow object."""
         self.app_id = app_id
         self.update_token(token)
+        self.http = requests.Session()
 
     @classmethod
     def update_token(cls, value):
@@ -41,6 +42,7 @@ class Glow:
         headers = {"applicationId": app_id}
 
         try:
+            _LOGGER.debug("Post 1: (%s)", url)
             response = requests.post(url, json=auth, headers=headers)
         except requests.Timeout as _timeout:
             raise CannotConnect from _timeout
@@ -80,7 +82,8 @@ class Glow:
         headers = {"applicationId": self.app_id, "token": self.token}
 
         try:
-            response = requests.get(url, headers=headers)
+            _LOGGER.debug("get 1: (%s)", url)
+            response = self.http.get(url, headers=headers)
         except requests.Timeout as _timeout:
             raise CannotConnect from _timeout
 
@@ -99,9 +102,10 @@ class Glow:
         try:
             if catchup:
                 catchup_url = f"{self.BASE_URL}/resource/{resource}/catchup"
-                response = requests.get(catchup_url, headers=headers)
+                response = self.http.get(catchup_url, headers=headers)
 
-            response = requests.get(url, headers=headers)
+            _LOGGER.debug("get 2: (%s)", url)
+            response = self.http.get(url, headers=headers)
 
         except requests.Timeout as err:
             _LOGGER.warning("Timeout connecting to Glow %s", err)
@@ -143,7 +147,7 @@ class Glow:
             utc_offset = int(utc_offset / 60)
             utc_str = f"&offset={utc_offset}"
         else:
-            utc_str = ""
+            utc_str = "&offset=0"
         return utc_str
 
     def current_usage(self, resource: Dict[str, Any]) -> Dict[str, Any]:

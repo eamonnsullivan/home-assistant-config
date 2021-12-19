@@ -39,8 +39,9 @@
   - device_id: 2341d2a8be724f4c9929d49168040eef
     domain: hue
     platform: device
-    type: remote_button_short_release
-    subtype: turn_on
+    type: short_release
+    subtype: 1
+    unique_id: 11cf219f-1993-4926-a5c4-35e1d8067037
   condition: []
   action:
   - service: script.turn_on
@@ -54,8 +55,9 @@
   - device_id: 2341d2a8be724f4c9929d49168040eef
     domain: hue
     platform: device
-    type: remote_button_long_release
-    subtype: turn_on
+    type: long_release
+    subtype: 1
+    unique_id: 11cf219f-1993-4926-a5c4-35e1d8067037
   condition: []
   action:
   - service: script.turn_on
@@ -69,8 +71,9 @@
   - device_id: f2944869d5973b00e81586d6bb9459e1
     domain: hue
     platform: device
-    type: remote_button_short_release
-    subtype: turn_on
+    type: short_release
+    subtype: 1
+    unique_id: 2501805f-383c-4929-aeaf-5dedb2ea997b
   condition: []
   action:
   - service: script.turn_on
@@ -84,8 +87,9 @@
   - device_id: f2944869d5973b00e81586d6bb9459e1
     domain: hue
     platform: device
-    type: remote_button_long_release
-    subtype: turn_on
+    type: long_release
+    subtype: 1
+    unique_id: 2501805f-383c-4929-aeaf-5dedb2ea997b
   condition: []
   action:
   - service: script.turn_on
