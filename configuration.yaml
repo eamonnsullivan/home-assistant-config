@@ -7,7 +7,7 @@ homeassistant:
   auth_providers:
     - type: trusted_networks
       trusted_networks:
-        - 192.168.1.0/24
+        - 192.168.50.0/24
     - type: homeassistant
   media_dirs:
     local: /media
@@ -25,11 +25,11 @@ scene: !include scenes.yaml
 
 media_player:
   - platform: soundtouch
-    host: 192.168.1.201
+    host: 192.168.50.201
     port: 8090
     name: Soundtouch Living Room
   - platform: soundtouch
-    host: 192.168.1.202
+    host: 192.168.50.202
     port: 8090
     name: Soundtouch Kitchen
   - platform: group

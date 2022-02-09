@@ -1,122 +1,345 @@
-2021-12-19 10:10:13 WARNING (SyncWorker_1) [homeassistant.loader] We found a custom integration hildebrandglow_dcc which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2021-12-19 10:10:13 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration nodered which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2021-12-19 10:10:22 ERROR (MainThread) [snitun.client.client_peer] Challenge/Response error with SniTun server (0 bytes read on a total of 32 expected bytes)
-2021-12-19 10:10:22 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
-2021-12-19 10:10:23 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.forest_room_sensor_battery_level (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:23 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.forest_room_lux_level (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:24 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.backup_free_disk_space_in_gb (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:24 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.backup_percent_of_disk_used (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:24 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.pineapple_free_disk_space_in_gb (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:24 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.pineapple_percent_of_disk_used (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:24 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.blueberry_free_disk_space_in_gb (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.blueberry_percent_of_disk_used (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.blueberry_boot_free_disk_space_in_gb (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.blueberry_boot_percent_of_disk_used (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.peewee_free_disk_space_in_gb (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.peewee_percent_of_disk_used (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.peewee_boot_free_disk_space_in_gb (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.peewee_boot_percent_of_disk_used (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.ringding_free_disk_space_in_gb (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.ringding_percent_of_disk_used (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.ringding_boot_free_disk_space_in_gb (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.ringding_boot_percent_of_disk_used (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.watermelon_free_disk_space_in_gb (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.watermelon_percent_of_disk_used (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.watermelon_boot_free_disk_space_in_gb (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:25 WARNING (MainThread) [homeassistant.helpers.entity] Entity sensor.watermelon_boot_percent_of_disk_used (<class 'custom_components.nodered.sensor.NodeRedSensor'>) implements device_state_attributes. Please report it to the custom component author.
-2021-12-19 10:10:38 ERROR (MainThread) [snitun.client.client_peer] Challenge/Response error with SniTun server (0 bytes read on a total of 32 expected bytes)
-2021-12-19 10:10:38 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
-2021-12-19 10:56:21 ERROR (SyncWorker_4) [custom_components.hildebrandglow_dcc.glow] Glow response status code: 500 (https://api.glowmarkt.com/api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/readings?from=2021-01-01T00:00:00&to=2021-12-19T23:59:59&period=P1Y&offset=0&function=sum)
-2021-12-19 10:56:21 ERROR (SyncWorker_5) [custom_components.hildebrandglow_dcc.glow] Glow response status code: 500 (https://api.glowmarkt.com/api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/readings?from=2021-01-01T00:00:00&to=2021-12-19T23:59:59&period=P1Y&offset=0&function=sum)
-2021-12-19 10:56:21 ERROR (SyncWorker_8) [custom_components.hildebrandglow_dcc.glow] Glow response status code: 500 (https://api.glowmarkt.com/api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/tariff)
-2021-12-19 10:56:21 ERROR (SyncWorker_3) [custom_components.hildebrandglow_dcc.glow] Glow response status code: 500 (https://api.glowmarkt.com/api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/tariff)
-2021-12-19 10:56:21 ERROR (SyncWorker_0) [custom_components.hildebrandglow_dcc.glow] Glow response status code: 500 (https://api.glowmarkt.com/api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/readings?from=2021-12-19T00:00:00&to=2021-12-19T23:59:59&period=P1D&offset=0&function=sum)
-2021-12-19 10:56:21 ERROR (SyncWorker_7) [custom_components.hildebrandglow_dcc.glow] Glow response status code: 500 (https://api.glowmarkt.com/api/v0-1/resource/4a22d2ce-6518-4e0f-ba60-8a61b81f3e08/readings?from=2021-12-19T00:00:00&to=2021-12-19T23:59:59&period=P1D&offset=0&function=sum)
-2021-12-19 10:56:21 ERROR (SyncWorker_1) [custom_components.hildebrandglow_dcc.glow] Glow response status code: 500 (https://api.glowmarkt.com/api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/readings?from=2021-12-19T00:00:00&to=2021-12-19T23:59:59&period=P1D&offset=0&function=sum)
-2021-12-19 10:56:21 ERROR (SyncWorker_9) [custom_components.hildebrandglow_dcc.glow] Glow response status code: 500 (https://api.glowmarkt.com/api/v0-1/resource/76655d58-a29e-4642-8f5b-e41cbc06206e/readings?from=2021-12-19T00:00:00&to=2021-12-19T23:59:59&period=P1D&offset=0&function=sum)
-2021-12-19 11:22:41 ERROR (MainThread) [homeassistant.components.shelly] Error fetching Forest room Sensor data: Sleeping device did not update within 3600 seconds interval
-2021-12-19 12:09:23 ERROR (Thread-4) [tuya_iot] error while get mqtt config
-2021-12-19 13:10:26 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=9, connect=9, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff93379910>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=3hourly
-2021-12-19 13:10:27 WARNING (SyncWorker_3) [urllib3.connectionpool] Retrying (Retry(total=9, connect=9, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff93753880>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=daily
-2021-12-19 13:10:31 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=8, connect=8, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff93647ac0>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=3hourly
-2021-12-19 13:10:32 WARNING (SyncWorker_3) [urllib3.connectionpool] Retrying (Retry(total=8, connect=8, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff93788f70>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=daily
-2021-12-19 13:10:37 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=7, connect=7, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff918c0d30>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=3hourly
-2021-12-19 13:10:38 WARNING (SyncWorker_3) [urllib3.connectionpool] Retrying (Retry(total=7, connect=7, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff93711d90>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=daily
-2021-12-19 13:10:45 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=6, connect=6, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff95d7e910>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=3hourly
-2021-12-19 13:10:46 WARNING (SyncWorker_3) [urllib3.connectionpool] Retrying (Retry(total=6, connect=6, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff918a69a0>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=daily
-2021-12-19 13:10:55 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=5, connect=5, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff9185c6a0>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=3hourly
-2021-12-19 13:10:56 WARNING (SyncWorker_3) [urllib3.connectionpool] Retrying (Retry(total=5, connect=5, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff9185c8e0>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=daily
-2021-12-19 13:11:09 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=4, connect=4, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa1e00250>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=3hourly
-2021-12-19 13:11:10 WARNING (SyncWorker_3) [urllib3.connectionpool] Retrying (Retry(total=4, connect=4, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa1e007f0>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=daily
-2021-12-19 13:11:33 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=3, connect=3, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff918633a0>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=3hourly
-2021-12-19 13:11:34 WARNING (SyncWorker_3) [urllib3.connectionpool] Retrying (Retry(total=3, connect=3, read=10, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff918c3250>: Failed to establish a new connection: [Errno -3] Try again')': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=daily
-2021-12-19 13:37:43 WARNING (MainThread) [hass_nabucasa.iot] Unable to connect: Cannot connect to host cloud.nabucasa.com:443 ssl:default [Try again]
-2021-12-19 13:37:56 WARNING (MainThread) [hass_nabucasa.iot] Unable to connect: Cannot connect to host cloud.nabucasa.com:443 ssl:default [Try again]
-2021-12-19 13:38:01 WARNING (SyncWorker_4) [urllib3.connectionpool] Retrying (Retry(total=2, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff91854670>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:38:06 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify_eamonn_sullivan is taking over 10 seconds
-2021-12-19 13:38:07 WARNING (SyncWorker_4) [urllib3.connectionpool] Retrying (Retry(total=1, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9336b4c0>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:38:10 WARNING (MainThread) [hass_nabucasa.iot] Unable to connect: Cannot connect to host cloud.nabucasa.com:443 ssl:default [Try again]
-2021-12-19 13:38:13 WARNING (SyncWorker_4) [urllib3.connectionpool] Retrying (Retry(total=0, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff91839910>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:38:26 WARNING (SyncWorker_0) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/readings?from=2021-01-01T00:00:00&to=2021-12-19T23:59:59&period=P1Y&offset=0&function=sum (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff936f98b0>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:38:26 WARNING (SyncWorker_2) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/readings?from=2021-01-01T00:00:00&to=2021-12-19T23:59:59&period=P1Y&offset=0&function=sum (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff936f92b0>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:38:26 WARNING (SyncWorker_3) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/tariff (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff936f96d0>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:38:26 WARNING (SyncWorker_9) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff936f9c70>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:38:26 WARNING (SyncWorker_5) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/tariff (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff936f99d0>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:38:26 WARNING (SyncWorker_6) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff936f9d90>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:38:26 WARNING (SyncWorker_4) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/76655d58-a29e-4642-8f5b-e41cbc06206e/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff936f9df0>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:38:26 WARNING (SyncWorker_8) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/4a22d2ce-6518-4e0f-ba60-8a61b81f3e08/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa215aca0>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:38:31 WARNING (SyncWorker_1) [urllib3.connectionpool] Retrying (Retry(total=2, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff917db820>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:38:31 WARNING (MainThread) [hass_nabucasa.iot] Unable to connect: Cannot connect to host cloud.nabucasa.com:443 ssl:default [Try again]
-2021-12-19 13:38:36 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify_eamonn_sullivan is taking over 10 seconds
-2021-12-19 13:38:37 WARNING (SyncWorker_1) [urllib3.connectionpool] Retrying (Retry(total=1, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff917fe700>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:38:43 WARNING (SyncWorker_1) [urllib3.connectionpool] Retrying (Retry(total=0, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff917db520>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:39:01 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=2, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff917f8c70>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:39:06 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify_eamonn_sullivan is taking over 10 seconds
-2021-12-19 13:39:07 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=1, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff918972e0>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:39:13 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=0, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff917f8790>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:39:31 WARNING (SyncWorker_0) [urllib3.connectionpool] Retrying (Retry(total=2, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9150ed00>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:39:36 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify_eamonn_sullivan is taking over 10 seconds
-2021-12-19 13:39:37 WARNING (SyncWorker_0) [urllib3.connectionpool] Retrying (Retry(total=1, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff917f8af0>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:39:43 WARNING (SyncWorker_0) [urllib3.connectionpool] Retrying (Retry(total=0, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff917f8b80>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:40:01 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=2, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff917db4c0>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:40:06 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify_eamonn_sullivan is taking over 10 seconds
-2021-12-19 13:40:07 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=1, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff91509af0>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:40:13 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=0, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9335ff40>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:40:26 ERROR (MainThread) [homeassistant.components.co2signal] Error requesting co2signal data: HTTPSConnectionPool(host='api.co2signal.com', port=443): Max retries exceeded with url: /v1/latest?lon=-0.39422571659088135&lat=51.56566658426592 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff91839fa0>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:40:26 WARNING (SyncWorker_0) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/tariff (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9150e550>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:40:26 WARNING (SyncWorker_7) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff91849130>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:40:26 WARNING (SyncWorker_8) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff91849700>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:40:26 WARNING (SyncWorker_5) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/readings?from=2021-01-01T00:00:00&to=2021-12-19T23:59:59&period=P1Y&offset=0&function=sum (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff918491f0>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:40:26 WARNING (SyncWorker_6) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/readings?from=2021-01-01T00:00:00&to=2021-12-19T23:59:59&period=P1Y&offset=0&function=sum (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff918b53a0>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:40:26 WARNING (SyncWorker_1) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/tariff (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff936f9280>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:40:26 WARNING (SyncWorker_9) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/76655d58-a29e-4642-8f5b-e41cbc06206e/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffaa4eb7c0>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:40:26 WARNING (SyncWorker_3) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/4a22d2ce-6518-4e0f-ba60-8a61b81f3e08/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff92a35d30>: Failed to establish a new connection: [Errno -3] Try again'))
-2021-12-19 13:40:31 WARNING (SyncWorker_4) [urllib3.connectionpool] Retrying (Retry(total=2, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff91821fa0>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:40:36 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify_eamonn_sullivan is taking over 10 seconds
-2021-12-19 13:40:37 WARNING (SyncWorker_4) [urllib3.connectionpool] Retrying (Retry(total=1, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff917dbbb0>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 13:40:43 WARNING (SyncWorker_4) [urllib3.connectionpool] Retrying (Retry(total=0, connect=None, read=False, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff91839880>: Failed to establish a new connection: [Errno -3] Try again')': /v1/me/player
-2021-12-19 14:08:23 ERROR (Thread-4) [tuya_iot] error while get mqtt config
-2021-12-19 14:31:49 ERROR (MainThread) [homeassistant.components.switch] Platform mqtt does not generate unique IDs. ID zwavejs2mqtt_0xea18c216_3-37-0-currentValue already exists - ignoring switch.macbook_charger_switch
-2021-12-19 14:31:49 ERROR (MainThread) [homeassistant.components.sensor] Platform mqtt does not generate unique IDs. ID zwavejs2mqtt_0xea18c216_3-50-0-value-65537 already exists - ignoring sensor.macbook_charger_electric_kwh_value
-2021-12-19 14:31:49 ERROR (MainThread) [homeassistant.components.sensor] Platform mqtt does not generate unique IDs. ID zwavejs2mqtt_0xea18c216_3-50-0-value-66049 already exists - ignoring sensor.macbook_charger_electric_w_value
-2021-12-19 14:31:49 ERROR (MainThread) [homeassistant.components.binary_sensor] Platform mqtt does not generate unique IDs. ID zwavejs2mqtt_0xea18c216_3-113-0-Power_Management-Over-current_status already exists - ignoring binary_sensor.macbook_charger_over_current_status
-2021-12-19 14:31:49 ERROR (MainThread) [homeassistant.components.binary_sensor] Platform mqtt does not generate unique IDs. ID zwavejs2mqtt_0xea18c216_3-113-0-Power_Management-Over-load_status already exists - ignoring binary_sensor.macbook_charger_over_load_status
-2021-12-19 14:31:49 ERROR (MainThread) [homeassistant.components.binary_sensor] Platform mqtt does not generate unique IDs. ID zwavejs2mqtt_0xea18c216_3-113-0-System-Hardware_status already exists - ignoring binary_sensor.macbook_charger_hardware_status
-2021-12-19 14:34:19 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
-2021-12-19 14:35:20 ERROR (MainThread) [homeassistant.components.zwave_js] Failed to connect: Server disconnected
-2021-12-19 14:35:20 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Z-Wave JS' for zwave_js integration not ready yet: Server disconnected; Retrying in background
-2021-12-19 15:12:36 ERROR (SyncWorker_2) [pyicloud.base] Authentication required for Account. (421)
-2021-12-19 16:07:23 ERROR (Thread-4) [tuya_iot] error while get mqtt config
-2021-12-19 18:06:24 ERROR (Thread-4) [tuya_iot] error while get mqtt config
-2021-12-19 18:28:20 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
-2021-12-19 18:29:14 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
-2021-12-19 18:53:33 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
-2021-12-19 19:06:10 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
-2021-12-19 19:19:15 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities light.christmas_tree
-2021-12-19 19:19:26 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities light.christmas_tree
-2021-12-19 19:21:39 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
-2021-12-19 19:33:30 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
-2021-12-19 19:34:10 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
-2021-12-19 19:44:43 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
-2021-12-19 19:45:04 WARNING (MainThread) [homeassistant.helpers.frame] Detected integration that uses str for device registry disabled_by. This is deprecated and will stop working in Home Assistant 2022.3, it should be updated to use DeviceEntryDisabler instead. Please report issue for config using this method at homeassistant/components/config/device_registry.py, line 65: entry = registry.async_update_device(**msg)
-2021-12-19 20:05:24 ERROR (Thread-4) [tuya_iot] error while get mqtt config
+2022-02-08 16:54:15 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hildebrandglow_dcc which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-08 16:54:15 WARNING (SyncWorker_1) [homeassistant.loader] We found a custom integration nodered which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-08 16:54:24 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 16:54:26 ERROR (MainThread) [homeassistant.components.mqtt] Failed to connect to MQTT server due to exception: timed out
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
+2022-02-08 16:54:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 16:54:29 WARNING (MainThread) [homeassistant.helpers.frame] Detected integration that accessed discovery_info.__contains__('ssdp_location') instead of discovery_info.upnp.__contains__('ssdp_location') or discovery_info.ssdp_headers.__contains__('ssdp_location'); this will fail in version 2022.6. Please report issue for upnp using this method at homeassistant/components/upnp/device.py, line 78: if ssdp.ATTR_SSDP_LOCATION not in headers:
+2022-02-08 16:54:29 WARNING (MainThread) [homeassistant.helpers.frame] Detected integration that accessed discovery_info['ssdp_location'] instead of discovery_info.ssdp_location, discovery_info.upnp['ssdp_location'] or discovery_info.ssdp_headers['ssdp_location']; this will fail in version 2022.6. Please report issue for upnp using this method at homeassistant/components/upnp/device.py, line 81: location = headers[ssdp.ATTR_SSDP_LOCATION]
+2022-02-08 16:54:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 16:54:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 16:54:33 WARNING (MainThread) [homeassistant.config_entries] Config entry 'wled-livingroom' for wled integration not ready yet: Invalid response from API: Error occurred while communicating with WLED device at 192.168.50.212; Retrying in background
+2022-02-08 16:54:33 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 16:54:33 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 16:54:33 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 17:14:28 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.bedroom_speaker
+2022-02-08 17:36:10 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
+2022-02-08 17:36:11 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 17:36:11 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 17:38:09 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 17:38:09 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 17:55:32 ERROR (MainThread) [homeassistant.components.wled] Error fetching wled data: Invalid response from API: Error occurred while communicating with WLED device at 192.168.50.2
+2022-02-08 18:06:22 ERROR (MainThread) [homeassistant.components.shelly] Error fetching Forest room Sensor data: Sleeping device did not update within 3600 seconds interval
+2022-02-08 18:09:25 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2022-02-08 18:09:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.soundtouch_living_room is taking over 10 seconds
+2022-02-08 18:13:44 WARNING (MainThread) [homeassistant.components.apple_tv] Connection lost to Apple TV "AppleTV"
+2022-02-08 18:13:45 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2022-02-08 18:13:45 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.soundtouch_living_room is taking over 10 seconds
+2022-02-08 18:13:48 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Heartbeat timeout, resetting connection
+2022-02-08 18:13:53 WARNING (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
+2022-02-08 18:13:55 ERROR (MainThread) [homeassistant.components.upnp] Error requesting ZenWiFi_XT8-79B0 data: ("Cannot connect to host 192.168.50.1:46428 ssl:default [Connect call failed ('192.168.50.1', 46428)]", None)
+2022-02-08 18:13:55 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2022-02-08 18:14:05 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:46 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-08 18:14:46 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+    await self._sync_helper(to_update, to_remove)
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+    await self.async_get_access_token()
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
+    raise alexa_errors.RequireRelink
+homeassistant.components.alexa.errors.RequireRelink
+2022-02-08 18:14:46 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
+2022-02-08 20:21:14 ERROR (MainThread) [homeassistant.components.upnp] Error requesting ZenWiFi_XT8-79B0 data: ("Cannot connect to host 192.168.50.1:47646 ssl:default [Connect call failed ('192.168.50.1', 47646)]", None)
+2022-02-08 20:21:16 WARNING (MainThread) [homeassistant.components.apple_tv] Connection lost to Apple TV "AppleTV"
+2022-02-08 20:21:20 WARNING (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
+2022-02-08 20:21:26 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2022-02-08 20:21:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.soundtouch_living_room is taking over 10 seconds
+2022-02-08 20:21:30 ERROR (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Failed to connect to service ServiceInfo(type='mdns', data='Google-Nest-Mini-98812a02cf7966bb105ad687068e108b._googlecast._tcp.local.'), retrying in 5.0s
+2022-02-08 20:22:19 WARNING (MainThread) [homeassistant.components.apple_tv] Connection lost to Apple TV "AppleTV"
+2022-02-08 20:22:24 WARNING (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
+2022-02-08 20:22:24 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Heartbeat timeout, resetting connection
+2022-02-08 20:22:26 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2022-02-08 20:22:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.soundtouch_living_room is taking over 10 seconds
+2022-02-08 20:22:27 WARNING (SyncWorker_8) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8a7d0d00>: Failed to establish a new connection: [Errno -3] Try again'))
+2022-02-08 20:22:27 WARNING (SyncWorker_5) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/readings?from=2022-01-01T00:00:00&to=2022-02-08T23:59:59&period=P1Y&offset=0&function=sum (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8f11adc0>: Failed to establish a new connection: [Errno -3] Try again'))
+2022-02-08 20:22:27 WARNING (SyncWorker_1) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8a860ac0>: Failed to establish a new connection: [Errno -3] Try again'))
+2022-02-08 20:22:27 WARNING (SyncWorker_3) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/76655d58-a29e-4642-8f5b-e41cbc06206e/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9a75e220>: Failed to establish a new connection: [Errno -3] Try again'))
+2022-02-08 20:22:27 WARNING (SyncWorker_0) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/tariff (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8a7a3880>: Failed to establish a new connection: [Errno -3] Try again'))
+2022-02-08 20:22:27 WARNING (SyncWorker_2) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/tariff (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8a7d0370>: Failed to establish a new connection: [Errno -3] Try again'))
+2022-02-08 20:22:27 WARNING (SyncWorker_4) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/4a22d2ce-6518-4e0f-ba60-8a61b81f3e08/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8f11aca0>: Failed to establish a new connection: [Errno -3] Try again'))
+2022-02-08 20:22:27 WARNING (SyncWorker_7) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/readings?from=2022-01-01T00:00:00&to=2022-02-08T23:59:59&period=P1Y&offset=0&function=sum (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8a860e50>: Failed to establish a new connection: [Errno -3] Try again'))
+2022-02-08 20:22:30 ERROR (MainThread) [homeassistant.components.upnp] Error requesting ZenWiFi_XT8-79B0 data: ("Cannot connect to host 192.168.50.1:44843 ssl:default [Connect call failed ('192.168.50.1', 44843)]", None)
+2022-02-08 20:22:32 ERROR (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Failed to connect to service ServiceInfo(type='mdns', data='Google-Home-Mini-91e1e4eb1bab04ca1cf5e89410f861e5._googlecast._tcp.local.'), retrying in 5.0s
+2022-02-08 20:22:34 ERROR (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Failed to connect to service ServiceInfo(type='mdns', data='Google-Nest-Mini-98812a02cf7966bb105ad687068e108b._googlecast._tcp.local.'), retrying in 5.0s
+2022-02-08 20:22:35 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.soundtouch_living_room fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 113] Host is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.9/http/client.py", line 1279, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1325, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1034, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff8a731af0>: Failed to establish a new connection: [Errno 113] Host is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.50.201', port=8090): Max retries exceeded with url: /now_playing (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8a731af0>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 512, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 724, in async_device_update
+    await task
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/soundtouch/media_player.py", line 227, in update
+    self._status = self._device.status()
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 482, in status
+    self.refresh_status()
+  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 243, in refresh_status
+    response = requests.get(
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.50.201', port=8090): Max retries exceeded with url: /now_playing (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8a731af0>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
+2022-02-08 20:22:36 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
+2022-02-09 02:54:34 WARNING (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
+2022-02-09 02:54:34 ERROR (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.76', 8009)), retrying in 5.0s
+2022-02-09 04:34:52 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Heartbeat timeout, resetting connection
+2022-02-09 04:34:59 ERROR (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.52', 8009)), retrying in 5.0s
+2022-02-09 06:29:34 ERROR (SyncWorker_1) [pyicloud.base] Authentication required for Account. (421)
