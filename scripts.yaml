@@ -109,3 +109,18 @@ start_meditation:
   sequence:
   mode: single
   icon: mdi:meditation
+stop_meditation:
+  alias: Stop meditation
+  sequence:
+  mode: single
+  icon: mdi:walk
+'1645809564764':
+  alias: Doorbell pressed
+  sequence:
+  mode: single
+  icon: mdi:gesture-tap-button
+'1646061498730':
+  alias: Play Radioparadise in Office
+  sequence:
+  mode: single
+  icon: mdi:music

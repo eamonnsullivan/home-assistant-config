@@ -96,3 +96,34 @@
     target:
       entity_id: script.hue_dimmer_long_pressed
   mode: single
+- id: '1645809702626'
+  alias: Doorbell pressed
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 7cd941cc659fc60f687642a70a2c82ee
+    domain: shelly
+    type: single
+    subtype: button
+  - platform: device
+    device_id: 7cd941cc659fc60f687642a70a2c82ee
+    domain: shelly
+    type: long
+    subtype: button
+  - platform: device
+    device_id: 7cd941cc659fc60f687642a70a2c82ee
+    domain: shelly
+    type: double
+    subtype: button
+  - platform: device
+    device_id: 7cd941cc659fc60f687642a70a2c82ee
+    domain: shelly
+    type: triple
+    subtype: button
+  condition: []
+  action:
+  - service: script.turn_on
+    data: {}
+    target:
+      entity_id: script.doorbell
+  mode: single

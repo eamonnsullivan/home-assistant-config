@@ -1,345 +1,241 @@
-2022-02-08 16:54:15 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hildebrandglow_dcc which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2022-02-08 16:54:15 WARNING (SyncWorker_1) [homeassistant.loader] We found a custom integration nodered which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2022-02-08 16:54:24 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 16:54:26 ERROR (MainThread) [homeassistant.components.mqtt] Failed to connect to MQTT server due to exception: timed out
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:26 WARNING (MainThread) [aiohue.util] Value {} of type <class 'dict'> is invalid for Device.identify, expected value of type typing.Optional[aiohue.v2.models.feature.IdentifyFeature]
-2022-02-08 16:54:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 16:54:29 WARNING (MainThread) [homeassistant.helpers.frame] Detected integration that accessed discovery_info.__contains__('ssdp_location') instead of discovery_info.upnp.__contains__('ssdp_location') or discovery_info.ssdp_headers.__contains__('ssdp_location'); this will fail in version 2022.6. Please report issue for upnp using this method at homeassistant/components/upnp/device.py, line 78: if ssdp.ATTR_SSDP_LOCATION not in headers:
-2022-02-08 16:54:29 WARNING (MainThread) [homeassistant.helpers.frame] Detected integration that accessed discovery_info['ssdp_location'] instead of discovery_info.ssdp_location, discovery_info.upnp['ssdp_location'] or discovery_info.ssdp_headers['ssdp_location']; this will fail in version 2022.6. Please report issue for upnp using this method at homeassistant/components/upnp/device.py, line 81: location = headers[ssdp.ATTR_SSDP_LOCATION]
-2022-02-08 16:54:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 16:54:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 16:54:33 WARNING (MainThread) [homeassistant.config_entries] Config entry 'wled-livingroom' for wled integration not ready yet: Invalid response from API: Error occurred while communicating with WLED device at 192.168.50.212; Retrying in background
-2022-02-08 16:54:33 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+2022-02-25 17:52:57 WARNING (SyncWorker_1) [homeassistant.loader] We found a custom integration hildebrandglow_dcc which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-25 17:52:57 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration nodered which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-25 17:53:07 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-25 17:53:09 ERROR (MainThread) [homeassistant.components.mqtt] Failed to connect to MQTT server due to exception: timed out
+2022-02-25 17:53:12 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-25 17:53:13 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-25 17:53:15 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 364, in _handle_entity_registry_updated
     await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 308, in _sync_helper
     await self.async_get_access_token()
   File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
     raise alexa_errors.RequireRelink
 homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 16:54:33 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+2022-02-25 17:53:15 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 364, in _handle_entity_registry_updated
     await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 308, in _sync_helper
     await self.async_get_access_token()
   File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
     raise alexa_errors.RequireRelink
 homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 16:54:33 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+2022-02-25 17:53:37 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities script.doorbell
+2022-02-25 17:53:38 ERROR (Thread-7) [homeassistant.components.cast.media_player] Failed to cast media https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa/media/local/Doorbell-1.mp3?authSig=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2MGRkNTZjZTlkMDc0NjU0YjYwZDdmOGQ5NDYwMzUzNCIsInBhdGgiOiIvbWVkaWEvbG9jYWwvRG9vcmJlbGwtMS5tcDMiLCJpYXQiOjE2NDU4MTE2MTcsImV4cCI6MTY0NTg5ODAxN30.AmvbedNWyiEqeNDwmwxggrD56u8zk8i1wCwRKI4yW9g from external_url (https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa). Please make sure the URL is: Reachable from the cast device and either a publicly resolvable hostname or an IP address
+2022-02-25 17:53:38 ERROR (Thread-6) [homeassistant.components.cast.media_player] Failed to cast media https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa/media/local/Doorbell-1.mp3?authSig=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2MGRkNTZjZTlkMDc0NjU0YjYwZDdmOGQ5NDYwMzUzNCIsInBhdGgiOiIvbWVkaWEvbG9jYWwvRG9vcmJlbGwtMS5tcDMiLCJpYXQiOjE2NDU4MTE2MTcsImV4cCI6MTY0NTg5ODAxN30.AmvbedNWyiEqeNDwmwxggrD56u8zk8i1wCwRKI4yW9g from external_url (https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa). Please make sure the URL is: Reachable from the cast device and either a publicly resolvable hostname or an IP address
+2022-02-25 17:53:58 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities script.doorbell
+2022-02-25 17:53:58 ERROR (Thread-7) [homeassistant.components.cast.media_player] Failed to cast media https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa/media/local/Doorbell-1.mp3?authSig=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2MGRkNTZjZTlkMDc0NjU0YjYwZDdmOGQ5NDYwMzUzNCIsInBhdGgiOiIvbWVkaWEvbG9jYWwvRG9vcmJlbGwtMS5tcDMiLCJpYXQiOjE2NDU4MTE2MzgsImV4cCI6MTY0NTg5ODAzOH0.wjLtaXzspqC5e2EZ2SFreK7q8HZd8QUVKKJk-4KelI4 from external_url (https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa). Please make sure the URL is: Reachable from the cast device and either a publicly resolvable hostname or an IP address
+2022-02-25 17:53:58 ERROR (Thread-6) [homeassistant.components.cast.media_player] Failed to cast media https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa/media/local/Doorbell-1.mp3?authSig=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2MGRkNTZjZTlkMDc0NjU0YjYwZDdmOGQ5NDYwMzUzNCIsInBhdGgiOiIvbWVkaWEvbG9jYWwvRG9vcmJlbGwtMS5tcDMiLCJpYXQiOjE2NDU4MTE2MzgsImV4cCI6MTY0NTg5ODAzOH0.wjLtaXzspqC5e2EZ2SFreK7q8HZd8QUVKKJk-4KelI4 from external_url (https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa). Please make sure the URL is: Reachable from the cast device and either a publicly resolvable hostname or an IP address
+2022-02-25 17:53:58 ERROR (Thread-7) [homeassistant.components.cast.media_player] Failed to cast media https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa/media/local/Doorbell-1.mp3?authSig=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2MGRkNTZjZTlkMDc0NjU0YjYwZDdmOGQ5NDYwMzUzNCIsInBhdGgiOiIvbWVkaWEvbG9jYWwvRG9vcmJlbGwtMS5tcDMiLCJpYXQiOjE2NDU4MTE2MzgsImV4cCI6MTY0NTg5ODAzOH0.wjLtaXzspqC5e2EZ2SFreK7q8HZd8QUVKKJk-4KelI4 from external_url (https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa). Please make sure the URL is: Reachable from the cast device and either a publicly resolvable hostname or an IP address
+2022-02-25 17:53:59 ERROR (Thread-6) [homeassistant.components.cast.media_player] Failed to cast media https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa/media/local/Doorbell-1.mp3?authSig=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2MGRkNTZjZTlkMDc0NjU0YjYwZDdmOGQ5NDYwMzUzNCIsInBhdGgiOiIvbWVkaWEvbG9jYWwvRG9vcmJlbGwtMS5tcDMiLCJpYXQiOjE2NDU4MTE2MzgsImV4cCI6MTY0NTg5ODAzOH0.wjLtaXzspqC5e2EZ2SFreK7q8HZd8QUVKKJk-4KelI4 from external_url (https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa). Please make sure the URL is: Reachable from the cast device and either a publicly resolvable hostname or an IP address
+2022-02-25 17:56:12 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities script.doorbell
+2022-02-25 17:56:12 ERROR (Thread-6) [homeassistant.components.cast.media_player] Failed to cast media https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa/media/local/doorbell-1.mp3?authSig=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2MGRkNTZjZTlkMDc0NjU0YjYwZDdmOGQ5NDYwMzUzNCIsInBhdGgiOiIvbWVkaWEvbG9jYWwvZG9vcmJlbGwtMS5tcDMiLCJpYXQiOjE2NDU4MTE3NzIsImV4cCI6MTY0NTg5ODE3Mn0.cxrQOFfagsOjPP9p1FaevobGYn0RmK8EVrjfKr9kPgE from external_url (https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa). Please make sure the URL is: Reachable from the cast device and either a publicly resolvable hostname or an IP address
+2022-02-25 17:56:12 ERROR (Thread-7) [homeassistant.components.cast.media_player] Failed to cast media https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa/media/local/doorbell-1.mp3?authSig=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2MGRkNTZjZTlkMDc0NjU0YjYwZDdmOGQ5NDYwMzUzNCIsInBhdGgiOiIvbWVkaWEvbG9jYWwvZG9vcmJlbGwtMS5tcDMiLCJpYXQiOjE2NDU4MTE3NzIsImV4cCI6MTY0NTg5ODE3Mn0.cxrQOFfagsOjPP9p1FaevobGYn0RmK8EVrjfKr9kPgE from external_url (https://p1f99kffoh1udmt972bc2sysd40xlbeb.ui.nabu.casa). Please make sure the URL is: Reachable from the cast device and either a publicly resolvable hostname or an IP address
+2022-02-25 17:57:44 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities script.doorbell
+2022-02-25 17:58:49 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities script.doorbell
+2022-02-25 19:05:05 ERROR (MainThread) [homeassistant.components.shelly] Error fetching Forest room Sensor data: Sleeping device did not update within 3600 seconds interval
+2022-02-25 19:23:12 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities script.doorbell
+2022-02-25 23:30:13 WARNING (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
+2022-02-25 23:30:43 ERROR (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.76', 8009)), retrying in 5.0s
+2022-02-26 01:25:46 ERROR (SyncWorker_0) [pyicloud.base] Authentication required for Account. (421)
+2022-02-26 02:48:15 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Heartbeat timeout, resetting connection
+2022-02-26 02:48:18 ERROR (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.52', 8009)), retrying in 5.0s
+2022-02-26 16:01:57 ERROR (SyncWorker_0) [pyicloud.base] Authentication required for Account. (421)
+2022-02-26 17:57:48 WARNING (MainThread) [homeassistant.components.websocket_api.http.connection] [281473209028464] Disconnected: Did not receive auth message within 10 seconds
+2022-02-26 18:14:58 ERROR (MainThread) [aioasuswrt.connection] Host timeout.
+2022-02-26 23:30:16 WARNING (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
+2022-02-26 23:30:46 ERROR (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.76', 8009)), retrying in 5.0s
+2022-02-27 04:51:29 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Heartbeat timeout, resetting connection
+2022-02-27 04:51:36 ERROR (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.52', 8009)), retrying in 5.0s
+2022-02-27 06:38:23 ERROR (SyncWorker_0) [pyicloud.base] Authentication required for Account. (421)
+2022-02-27 09:46:49 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities script.doorbell
+2022-02-27 09:52:33 ERROR (SyncWorker_1) [spotipy.client] HTTP Error for PUT to https://api.spotify.com/v1/me/player/shuffle?state=true with Params: {} returned 403 due to Restricted device
+2022-02-27 09:52:52 ERROR (SyncWorker_1) [spotipy.client] HTTP Error for PUT to https://api.spotify.com/v1/me/player/play with Params: {} returned 403 due to Restricted device
+2022-02-27 09:52:54 ERROR (SyncWorker_8) [spotipy.client] HTTP Error for PUT to https://api.spotify.com/v1/me/player/play with Params: {} returned 403 due to Restricted device
+2022-02-27 14:34:14 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities script.doorbell
+2022-02-27 15:12:31 ERROR (MainThread) [aioasuswrt.connection] Host timeout.
+2022-02-27 17:40:10 WARNING (Recorder) [homeassistant.components.sensor.recorder] Entity sensor.gas_consumption_today from integration hildebrandglow_dcc has state class total_increasing, but its state is not strictly increasing. Triggered by state 56.468 (56.612) with last_updated set to 2022-02-27T17:35:07.825979+00:00. Please report it to the custom component author.
+2022-02-27 17:40:10 WARNING (Recorder) [homeassistant.components.sensor.recorder] Entity sensor.gas_consumption_year from integration hildebrandglow_dcc has state class total_increasing, but its state is not strictly increasing. Triggered by state 4930.315 (4930.46) with last_updated set to 2022-02-27T17:35:07.802462+00:00. Please report it to the custom component author.
+2022-02-27 17:40:10 WARNING (Recorder) [homeassistant.components.sensor.recorder] Entity sensor.gas_cost_today from integration hildebrandglow_dcc has state class total_increasing, but its state is not strictly increasing. Triggered by state 4.76 (4.78) with last_updated set to 2022-02-27T17:35:07.925665+00:00. Please report it to the custom component author.
+2022-02-27 21:13:06 ERROR (SyncWorker_3) [pyicloud.base] Authentication required for Account. (421)
+2022-02-27 21:43:10 ERROR (SyncWorker_3) [pyicloud.base] Authentication required for Account. (421)
+2022-02-27 23:31:21 WARNING (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
+2022-02-27 23:31:51 ERROR (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.76', 8009)), retrying in 5.0s
+2022-02-28 02:23:27 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Heartbeat timeout, resetting connection
+2022-02-28 02:23:42 ERROR (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.52', 8009)), retrying in 5.0s
+2022-02-28 07:51:32 ERROR (SyncWorker_1) [pyicloud.base] Authentication required for Account. (421)
+2022-02-28 07:51:51 WARNING (SyncWorker_5) [pyicloud.base.http] Failed to parse response with JSON mimetype
+2022-02-28 07:51:57 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-28 07:51:57 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 364, in _handle_entity_registry_updated
     await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 308, in _sync_helper
     await self.async_get_access_token()
   File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
     raise alexa_errors.RequireRelink
 homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 17:14:28 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.bedroom_speaker
-2022-02-08 17:36:10 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
-2022-02-08 17:36:11 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 17:36:11 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+2022-02-28 07:51:58 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-28 07:51:58 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 364, in _handle_entity_registry_updated
     await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 308, in _sync_helper
     await self.async_get_access_token()
   File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
     raise alexa_errors.RequireRelink
 homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 17:38:09 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 17:38:09 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+2022-02-28 07:51:58 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-28 07:51:58 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 364, in _handle_entity_registry_updated
     await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 308, in _sync_helper
     await self.async_get_access_token()
   File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
     raise alexa_errors.RequireRelink
 homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 17:55:32 ERROR (MainThread) [homeassistant.components.wled] Error fetching wled data: Invalid response from API: Error occurred while communicating with WLED device at 192.168.50.2
-2022-02-08 18:06:22 ERROR (MainThread) [homeassistant.components.shelly] Error fetching Forest room Sensor data: Sleeping device did not update within 3600 seconds interval
-2022-02-08 18:09:25 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
-2022-02-08 18:09:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.soundtouch_living_room is taking over 10 seconds
-2022-02-08 18:13:44 WARNING (MainThread) [homeassistant.components.apple_tv] Connection lost to Apple TV "AppleTV"
-2022-02-08 18:13:45 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
-2022-02-08 18:13:45 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.soundtouch_living_room is taking over 10 seconds
-2022-02-08 18:13:48 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Heartbeat timeout, resetting connection
-2022-02-08 18:13:53 WARNING (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
-2022-02-08 18:13:55 ERROR (MainThread) [homeassistant.components.upnp] Error requesting ZenWiFi_XT8-79B0 data: ("Cannot connect to host 192.168.50.1:46428 ssl:default [Connect call failed ('192.168.50.1', 46428)]", None)
-2022-02-08 18:13:55 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
-2022-02-08 18:14:05 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+2022-02-28 07:51:58 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-28 07:51:58 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 364, in _handle_entity_registry_updated
     await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 308, in _sync_helper
     await self.async_get_access_token()
   File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
     raise alexa_errors.RequireRelink
 homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+2022-02-28 07:52:43 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-28 07:52:43 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 364, in _handle_entity_registry_updated
     await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 308, in _sync_helper
     await self.async_get_access_token()
   File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
     raise alexa_errors.RequireRelink
 homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+2022-02-28 07:52:43 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-28 07:52:43 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 364, in _handle_entity_registry_updated
     await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 308, in _sync_helper
     await self.async_get_access_token()
   File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
     raise alexa_errors.RequireRelink
 homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+2022-02-28 08:52:24 ERROR (MainThread) [homeassistant.components.device_tracker] Platform icloud does not generate unique IDs. ID ad0zRRa4saj3JdxQEgCSAYDfWq8Hbz3Oi3jk2sUzm253tox7izS2U+HYVNSUzmWV already exists - ignoring device_tracker.eamonns_iphone
+2022-02-28 08:52:24 ERROR (MainThread) [homeassistant.components.sensor] Platform icloud does not generate unique IDs. ID ad0zRRa4saj3JdxQEgCSAYDfWq8Hbz3Oi3jk2sUzm253tox7izS2U+HYVNSUzmWV_battery already exists - ignoring sensor.eamonns_iphone_battery_state
+2022-02-28 15:18:20 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
+2022-02-28 15:24:15 ERROR (SyncWorker_2) [pyicloud.base] Authentication required for Account. (421)
+2022-02-28 15:24:27 ERROR (SyncWorker_5) [pyicloud.base] Authentication required for Account. (421)
+2022-02-28 15:52:15 ERROR (Thread-7) [homeassistant.components.cast.media_player] Failed to cast media https://stream.radioparadise.com/aac-128. Please make sure the URL is: Reachable from the cast device and either a publicly resolvable hostname or an IP address
+2022-02-28 15:53:26 ERROR (Thread-7) [homeassistant.components.cast.media_player] Failed to cast media https://www.bbc.co.uk/sounds/play/live:bbc_radio_fourfm. Please make sure the URL is: Reachable from the cast device and either a publicly resolvable hostname or an IP address
+2022-02-28 15:53:26 ERROR (Thread-7) [homeassistant.components.cast.media_player] Failed to cast media https://www.bbc.co.uk/sounds/play/live:bbc_radio_fourfm. Please make sure the URL is: Reachable from the cast device and either a publicly resolvable hostname or an IP address
+2022-02-28 15:53:33 ERROR (Thread-7) [homeassistant.components.cast.media_player] Failed to cast media https://www.bbc.co.uk/sounds/play/live:bbc_radio_fourfm. Please make sure the URL is: Reachable from the cast device and either a publicly resolvable hostname or an IP address
+2022-02-28 15:53:34 ERROR (Thread-7) [homeassistant.components.cast.media_player] Failed to cast media https://www.bbc.co.uk/sounds/play/live:bbc_radio_fourfm. Please make sure the URL is: Reachable from the cast device and either a publicly resolvable hostname or an IP address
+2022-02-28 16:51:59 WARNING (MainThread) [homeassistant.components.hue.bridge.light] Device Theresa’s bedside lamp changed state while reported as disconnected. This might be an indicator that routing is not working for this device or the device is having connectivity issues. You can disable availability reporting for this device in the Hue options. Device details: innr - On/Off plug (SP 222) fw: 2.1
+2022-02-28 18:29:27 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
+2022-02-28 18:29:27 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 364, in _handle_entity_registry_updated
     await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
+  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 308, in _sync_helper
     await self.async_get_access_token()
   File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
     raise alexa_errors.RequireRelink
 homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+2022-02-28 22:26:35 ERROR (SyncWorker_6) [pyicloud.base] Authentication required for Account. (421)
+2022-02-28 22:56:31 ERROR (SyncWorker_2) [pyicloud.base] Authentication required for Account. (421)
+2022-02-28 23:30:20 WARNING (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
+2022-02-28 23:30:50 ERROR (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.76', 8009)), retrying in 5.0s
+2022-03-01 00:27:01 WARNING (MainThread) [homeassistant.components.websocket_api.http.connection] [281473184448576] Disconnected: Did not receive auth message within 10 seconds
+2022-03-01 04:59:45 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Heartbeat timeout, resetting connection
+2022-03-01 04:59:52 ERROR (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.52', 8009)), retrying in 5.0s
+2022-03-01 05:58:03 ERROR (SyncWorker_8) [pyicloud.base] Authentication required for Account. (421)
+2022-03-01 05:58:11 ERROR (SyncWorker_7) [pyicloud.base] Authentication required for Account. (421)
+2022-03-01 12:59:57 ERROR (SyncWorker_7) [pyicloud.base] Authentication required for Account. (421)
+2022-03-01 13:29:54 ERROR (SyncWorker_3) [pyicloud.base] Authentication required for Account. (421)
+2022-03-01 20:31:29 ERROR (SyncWorker_3) [pyicloud.base] Authentication required for Account. (421)
+2022-03-01 20:31:32 ERROR (SyncWorker_0) [pyicloud.base] Authentication required for Account. (421)
+2022-03-01 23:30:20 WARNING (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
+2022-03-01 23:30:38 ERROR (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.76', 8009)), retrying in 5.0s
+2022-03-02 00:03:06 ERROR (MainThread) [hass_nabucasa.remote] Timeout connecting to snitun server
+2022-03-02 03:33:11 ERROR (SyncWorker_1) [pyicloud.base] Authentication required for Account. (421)
+2022-03-02 04:03:19 ERROR (SyncWorker_1) [pyicloud.base] Authentication required for Account. (421)
+2022-03-02 04:32:54 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Heartbeat timeout, resetting connection
+2022-03-02 04:33:01 ERROR (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.52', 8009)), retrying in 5.0s
+2022-03-02 11:05:09 ERROR (SyncWorker_1) [pyicloud.base] Authentication required for Account. (421)
+2022-03-02 11:35:05 ERROR (SyncWorker_7) [pyicloud.base] Authentication required for Account. (421)
+2022-03-02 17:27:05 ERROR (SyncWorker_8) [spotipy.client] HTTP Error for PUT to https://api.spotify.com/v1/me/player/shuffle?state=true with Params: {} returned 403 due to Restricted device
+2022-03-02 18:36:38 ERROR (SyncWorker_7) [pyicloud.base] Authentication required for Account. (421)
+2022-03-02 18:36:48 ERROR (SyncWorker_9) [pyicloud.base] Authentication required for Account. (421)
+2022-03-02 20:33:47 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.mantle_lights
+2022-03-02 23:30:14 WARNING (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
+2022-03-02 23:30:45 ERROR (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.76', 8009)), retrying in 5.0s
+2022-03-03 01:38:53 ERROR (SyncWorker_1) [pyicloud.base] Authentication required for Account. (421)
+2022-03-03 02:08:58 ERROR (SyncWorker_6) [pyicloud.base] Authentication required for Account. (421)
+2022-03-03 02:40:03 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Heartbeat timeout, resetting connection
+2022-03-03 02:40:10 ERROR (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.52', 8009)), retrying in 5.0s
+2022-03-03 06:08:20 WARNING (SyncWorker_5) [urllib3.connectionpool] Retrying (Retry(total=9, connect=10, read=9, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='datapoint.metoffice.gov.uk', port=80): Read timed out. (read timeout=1)")': /public/data/val/wxfcs/all/json/3672?key=21202dde-c73e-4522-842b-4e57aaa68c45&res=3hourly
+2022-03-03 08:40:02 ERROR (SyncWorker_5) [pyicloud.base] Authentication required for Account. (421)
+2022-03-03 09:10:26 ERROR (SyncWorker_0) [pyicloud.base] Authentication required for Account. (421)
+2022-03-03 15:44:44 ERROR (SyncWorker_3) [pyicloud.base] Authentication required for Account. (421)
+2022-03-03 16:15:10 ERROR (SyncWorker_3) [pyicloud.base] Authentication required for Account. (421)
+2022-03-03 22:47:07 ERROR (SyncWorker_5) [pyicloud.base] Authentication required for Account. (421)
+2022-03-03 23:17:30 ERROR (SyncWorker_3) [pyicloud.base] Authentication required for Account. (421)
+2022-03-03 23:30:14 WARNING (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
+2022-03-03 23:30:22 ERROR (MainThread) [homeassistant.core] Error executing service: <ServiceCall switch.turn_off (c:bf56d4aaffe0bcbdfe6014812a7d8df4): entity_id=['switch.ocean_room_power']>
 Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
-    await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
-    await self.async_get_access_token()
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
-    raise alexa_errors.RequireRelink
-homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1648, in catch_exceptions
+    await coro_or_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1667, in _execute_service
+    await cast(Callable[[ServiceCall], Awaitable[None]], handler.job.target)(
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_component.py", line 204, in handle_service
+    await self.hass.helpers.service.entity_service_call(
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 668, in entity_service_call
+    future.result()  # pop exception if have
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 930, in async_request_call
+    await coro
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 705, in _handle_entity_call
+    await result
+  File "/usr/src/homeassistant/homeassistant/components/zwave_js/switch.py", line 83, in async_turn_off
+    await self.info.node.async_set_value(self._target_value, False)
+  File "/usr/local/lib/python3.9/site-packages/zwave_js_server/model/node.py", line 478, in async_set_value
+    result = await self.async_send_command(
+  File "/usr/local/lib/python3.9/site-packages/zwave_js_server/model/node.py", line 435, in async_send_command
+    result = await self.client.async_send_command(message, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/zwave_js_server/client.py", line 103, in async_send_command
+    return await future
+zwave_js_server.exceptions.FailedZWaveCommand: Z-Wave error 204: Failed to send the command after 3 attempts (Status NoAck) (ZW0204)
+2022-03-03 23:30:44 ERROR (Thread-7) [pychromecast.socket_client] [office speaker(192.168.50.76):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.76', 8009)), retrying in 5.0s
+2022-03-04 02:37:54 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Heartbeat timeout, resetting connection
+2022-03-04 02:38:01 ERROR (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.52', 8009)), retrying in 5.0s
+2022-03-04 05:48:46 ERROR (SyncWorker_8) [pyicloud.base] Authentication required for Account. (421)
+2022-03-04 06:48:43 ERROR (SyncWorker_9) [pyicloud.base] Authentication required for Account. (421)
+2022-03-04 07:00:21 ERROR (MainThread) [homeassistant.core] Error executing service: <ServiceCall switch.turn_on (c:05dfa6a6f279c6425aa45d9c4e647bcd): entity_id=['switch.ocean_room_power']>
 Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
-    await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
-    await self.async_get_access_token()
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
-    raise alexa_errors.RequireRelink
-homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
-    await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
-    await self.async_get_access_token()
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
-    raise alexa_errors.RequireRelink
-homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
-    await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
-    await self.async_get_access_token()
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
-    raise alexa_errors.RequireRelink
-homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
-    await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
-    await self.async_get_access_token()
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
-    raise alexa_errors.RequireRelink
-homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
-    await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
-    await self.async_get_access_token()
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
-    raise alexa_errors.RequireRelink
-homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
-    await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
-    await self.async_get_access_token()
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
-    raise alexa_errors.RequireRelink
-homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
-    await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
-    await self.async_get_access_token()
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
-    raise alexa_errors.RequireRelink
-homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
-    await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
-    await self.async_get_access_token()
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
-    raise alexa_errors.RequireRelink
-homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:29 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:29 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
-    await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
-    await self.async_get_access_token()
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
-    raise alexa_errors.RequireRelink
-homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:46 WARNING (MainThread) [hass_nabucasa.cloud_api] Fetched https://alexa-api.nabucasa.com/access_token (400)
-2022-02-08 18:14:46 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 360, in _handle_entity_registry_updated
-    await self._sync_helper(to_update, to_remove)
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 304, in _sync_helper
-    await self.async_get_access_token()
-  File "/usr/src/homeassistant/homeassistant/components/cloud/alexa_config.py", line 170, in async_get_access_token
-    raise alexa_errors.RequireRelink
-homeassistant.components.alexa.errors.RequireRelink
-2022-02-08 18:14:46 WARNING (MainThread) [homeassistant.components.cloud.google_config] Error reporting state - 5: Requested entity was not found.
-2022-02-08 20:21:14 ERROR (MainThread) [homeassistant.components.upnp] Error requesting ZenWiFi_XT8-79B0 data: ("Cannot connect to host 192.168.50.1:47646 ssl:default [Connect call failed ('192.168.50.1', 47646)]", None)
-2022-02-08 20:21:16 WARNING (MainThread) [homeassistant.components.apple_tv] Connection lost to Apple TV "AppleTV"
-2022-02-08 20:21:20 WARNING (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
-2022-02-08 20:21:26 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
-2022-02-08 20:21:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.soundtouch_living_room is taking over 10 seconds
-2022-02-08 20:21:30 ERROR (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Failed to connect to service ServiceInfo(type='mdns', data='Google-Nest-Mini-98812a02cf7966bb105ad687068e108b._googlecast._tcp.local.'), retrying in 5.0s
-2022-02-08 20:22:19 WARNING (MainThread) [homeassistant.components.apple_tv] Connection lost to Apple TV "AppleTV"
-2022-02-08 20:22:24 WARNING (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
-2022-02-08 20:22:24 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Heartbeat timeout, resetting connection
-2022-02-08 20:22:26 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
-2022-02-08 20:22:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.soundtouch_living_room is taking over 10 seconds
-2022-02-08 20:22:27 WARNING (SyncWorker_8) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8a7d0d00>: Failed to establish a new connection: [Errno -3] Try again'))
-2022-02-08 20:22:27 WARNING (SyncWorker_5) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/readings?from=2022-01-01T00:00:00&to=2022-02-08T23:59:59&period=P1Y&offset=0&function=sum (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8f11adc0>: Failed to establish a new connection: [Errno -3] Try again'))
-2022-02-08 20:22:27 WARNING (SyncWorker_1) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8a860ac0>: Failed to establish a new connection: [Errno -3] Try again'))
-2022-02-08 20:22:27 WARNING (SyncWorker_3) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/76655d58-a29e-4642-8f5b-e41cbc06206e/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9a75e220>: Failed to establish a new connection: [Errno -3] Try again'))
-2022-02-08 20:22:27 WARNING (SyncWorker_0) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/tariff (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8a7a3880>: Failed to establish a new connection: [Errno -3] Try again'))
-2022-02-08 20:22:27 WARNING (SyncWorker_2) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/e596c4c2-7e66-4976-b130-b57e339b3d74/tariff (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8a7d0370>: Failed to establish a new connection: [Errno -3] Try again'))
-2022-02-08 20:22:27 WARNING (SyncWorker_4) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/4a22d2ce-6518-4e0f-ba60-8a61b81f3e08/catchup (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8f11aca0>: Failed to establish a new connection: [Errno -3] Try again'))
-2022-02-08 20:22:27 WARNING (SyncWorker_7) [custom_components.hildebrandglow_dcc.glow] Error connecting to Glow HTTPSConnectionPool(host='api.glowmarkt.com', port=443): Max retries exceeded with url: /api/v0-1/resource/6d8dbccc-d02e-442e-a6f0-e97244f45b4a/readings?from=2022-01-01T00:00:00&to=2022-02-08T23:59:59&period=P1Y&offset=0&function=sum (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff8a860e50>: Failed to establish a new connection: [Errno -3] Try again'))
-2022-02-08 20:22:30 ERROR (MainThread) [homeassistant.components.upnp] Error requesting ZenWiFi_XT8-79B0 data: ("Cannot connect to host 192.168.50.1:44843 ssl:default [Connect call failed ('192.168.50.1', 44843)]", None)
-2022-02-08 20:22:32 ERROR (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Failed to connect to service ServiceInfo(type='mdns', data='Google-Home-Mini-91e1e4eb1bab04ca1cf5e89410f861e5._googlecast._tcp.local.'), retrying in 5.0s
-2022-02-08 20:22:34 ERROR (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Failed to connect to service ServiceInfo(type='mdns', data='Google-Nest-Mini-98812a02cf7966bb105ad687068e108b._googlecast._tcp.local.'), retrying in 5.0s
-2022-02-08 20:22:35 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.soundtouch_living_room fails
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
-    conn = connection.create_connection(
-  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
-    raise err
-  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
-    sock.connect(sa)
-OSError: [Errno 113] Host is unreachable
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
-    httplib_response = self._make_request(
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
-    conn.request(method, url, **httplib_request_kw)
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
-    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
-  File "/usr/local/lib/python3.9/http/client.py", line 1279, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/local/lib/python3.9/http/client.py", line 1325, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/local/lib/python3.9/http/client.py", line 1274, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/local/lib/python3.9/http/client.py", line 1034, in _send_output
-    self.send(msg)
-  File "/usr/local/lib/python3.9/http/client.py", line 974, in send
-    self.connect()
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
-    conn = self._new_conn()
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
-    raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff8a731af0>: Failed to establish a new connection: [Errno 113] Host is unreachable
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 440, in send
-    resp = conn.urlopen(
-  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 785, in urlopen
-    retries = retries.increment(
-  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
-    raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.50.201', port=8090): Max retries exceeded with url: /now_playing (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8a731af0>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 512, in async_update_ha_state
-    await self.async_device_update()
-  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 724, in async_device_update
-    await task
-  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/usr/src/homeassistant/homeassistant/components/soundtouch/media_player.py", line 227, in update
-    self._status = self._device.status()
-  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 482, in status
-    self.refresh_status()
-  File "/usr/local/lib/python3.9/site-packages/libsoundtouch/device.py", line 243, in refresh_status
-    response = requests.get(
-  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 75, in get
-    return request('get', url, params=params, **kwargs)
-  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 61, in request
-    return session.request(method=method, url=url, **kwargs)
-  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 529, in request
-    resp = self.send(prep, **send_kwargs)
-  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 645, in send
-    r = adapter.send(request, **kwargs)
-  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 519, in send
-    raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.50.201', port=8090): Max retries exceeded with url: /now_playing (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8a731af0>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
-2022-02-08 20:22:36 WARNING (MainThread) [homeassistant.components.media_player] Updating soundtouch media_player took longer than the scheduled update interval 0:00:10
-2022-02-09 02:54:34 WARNING (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Heartbeat timeout, resetting connection
-2022-02-09 02:54:34 ERROR (Thread-7) [pychromecast.socket_client] [Bedroom speaker(192.168.50.76):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.76', 8009)), retrying in 5.0s
-2022-02-09 04:34:52 WARNING (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Heartbeat timeout, resetting connection
-2022-02-09 04:34:59 ERROR (Thread-6) [pychromecast.socket_client] [Living room speaker(192.168.50.52):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.50.52', 8009)), retrying in 5.0s
-2022-02-09 06:29:34 ERROR (SyncWorker_1) [pyicloud.base] Authentication required for Account. (421)
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1648, in catch_exceptions
+    await coro_or_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1667, in _execute_service
+    await cast(Callable[[ServiceCall], Awaitable[None]], handler.job.target)(
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_component.py", line 204, in handle_service
+    await self.hass.helpers.service.entity_service_call(
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 668, in entity_service_call
+    future.result()  # pop exception if have
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 930, in async_request_call
+    await coro
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 705, in _handle_entity_call
+    await result
+  File "/usr/src/homeassistant/homeassistant/components/zwave_js/switch.py", line 78, in async_turn_on
+    await self.info.node.async_set_value(self._target_value, True)
+  File "/usr/local/lib/python3.9/site-packages/zwave_js_server/model/node.py", line 478, in async_set_value
+    result = await self.async_send_command(
+  File "/usr/local/lib/python3.9/site-packages/zwave_js_server/model/node.py", line 435, in async_send_command
+    result = await self.client.async_send_command(message, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/zwave_js_server/client.py", line 103, in async_send_command
+    return await future
+zwave_js_server.exceptions.FailedZWaveCommand: Z-Wave error 204: Failed to send the command after 3 attempts (Status NoAck) (ZW0204)
