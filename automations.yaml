@@ -127,3 +127,161 @@
     target:
       entity_id: script.doorbell
   mode: single
+- id: '1646506367466'
+  alias: Motion in forest room during the day
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: f9dabd2e36ef9495f6bf99f3fac2444a
+    entity_id: binary_sensor.forest_room_sensor_motion
+    domain: binary_sensor
+  condition:
+  - condition: time
+    after: 06:00:00
+    before: '21:00:00'
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+  - condition: numeric_state
+    entity_id: sensor.forest_room_lux_level
+    below: '5'
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.forest_room_bright
+    metadata: {}
+  mode: single
+- id: '1646506524009'
+  alias: Turn off lights
+  description: ''
+  trigger:
+  - type: no_motion
+    platform: device
+    device_id: f9dabd2e36ef9495f6bf99f3fac2444a
+    entity_id: binary_sensor.forest_room_sensor_motion
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    target:
+      area_id: forest_room
+  mode: single
+- id: '1646506781588'
+  alias: Turn on lights at night
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: f9dabd2e36ef9495f6bf99f3fac2444a
+    entity_id: binary_sensor.forest_room_sensor_motion
+    domain: binary_sensor
+  condition:
+  - condition: time
+    after: '21:00:00'
+    before: 06:00:00
+  - type: is_illuminance
+    condition: device
+    device_id: f9dabd2e36ef9495f6bf99f3fac2444a
+    entity_id: sensor.forest_room_sensor_luminosity
+    domain: sensor
+    below: 5
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.forest_room_dimmed
+    metadata: {}
+  mode: single
+- id: '1646507246007'
+  alias: Motion detected in the kitchen (day)
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 767ca4dc84f63db642c0637b2e522853
+    entity_id: binary_sensor.kitchen_sensor_home_security_motion_detection
+    domain: binary_sensor
+  condition:
+  - condition: time
+    after: 06:00:00
+    before: '21:00:00'
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+  - type: is_illuminance
+    condition: device
+    device_id: 767ca4dc84f63db642c0637b2e522853
+    entity_id: sensor.kitchen_sensor_illuminance
+    domain: sensor
+    below: 10
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.kitchen_bright
+    metadata: {}
+  mode: single
+- id: '1646507293924'
+  alias: No motion for a while
+  description: ''
+  trigger:
+  - type: no_motion
+    platform: device
+    device_id: 767ca4dc84f63db642c0637b2e522853
+    entity_id: binary_sensor.kitchen_sensor_home_security_motion_detection
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    target:
+      area_id: kitchen
+  mode: single
+- id: '1646507387795'
+  alias: Motion detected at night
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 767ca4dc84f63db642c0637b2e522853
+    entity_id: binary_sensor.kitchen_sensor_home_security_motion_detection
+    domain: binary_sensor
+  condition:
+  - condition: time
+    after: '21:00:00'
+    before: 06:00:00
+    weekday:
+    - sun
+    - sat
+    - fri
+    - thu
+    - wed
+    - tue
+    - mon
+  - condition: numeric_state
+    entity_id: sensor.kitchen_sensor_illuminance
+    below: '10'
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.kitchen_dimmed
+    metadata: {}
+  mode: single
